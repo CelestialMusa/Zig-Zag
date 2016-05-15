@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d25535935DataSet6" targetNamespace="http://tempuri.org/d25535935DataSet6.xsd" xmlns:mstns="http://tempuri.org/d25535935DataSet6.xsd" xmlns="http://tempuri.org/d25535935DataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="d25535935ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="d25535935ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Zig_Zag.Properties.Settings.GlobalReference.Default.d25535935ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pet_historical_examsTableAdapter" GeneratorDataComponentClassName="pet_historical_examsTableAdapter" Name="pet_historical_exams" UserDataComponentName="pet_historical_examsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="d25535935ConnectionString (Settings)" DbObjectName="d25535935.pet_historical_exams" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Examination Date`, `Examination Description`, `Pet name`, `Pet type`, `Pet Description`, `Examiner number`, `Examiner Name` FROM `d25535935`.`pet_historical_exams`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Examination Date" DataSetColumn="Examination Date" />
+              <Mapping SourceColumn="Examination Description" DataSetColumn="Examination Description" />
+              <Mapping SourceColumn="Pet name" DataSetColumn="Pet name" />
+              <Mapping SourceColumn="Pet type" DataSetColumn="Pet type" />
+              <Mapping SourceColumn="Pet Description" DataSetColumn="Pet Description" />
+              <Mapping SourceColumn="Examiner number" DataSetColumn="Examiner number" />
+              <Mapping SourceColumn="Examiner Name" DataSetColumn="Examiner Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d25535935DataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="d25535935DataSet6" msprop:Generator_UserDSName="d25535935DataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="pet_historical_exams" msprop:Generator_TableClassName="pet_historical_examsDataTable" msprop:Generator_TableVarName="tablepet_historical_exams" msprop:Generator_TablePropName="pet_historical_exams" msprop:Generator_RowDeletingName="pet_historical_examsRowDeleting" msprop:Generator_RowChangingName="pet_historical_examsRowChanging" msprop:Generator_RowEvHandlerName="pet_historical_examsRowChangeEventHandler" msprop:Generator_RowDeletedName="pet_historical_examsRowDeleted" msprop:Generator_UserTableName="pet_historical_exams" msprop:Generator_RowChangedName="pet_historical_examsRowChanged" msprop:Generator_RowEvArgName="pet_historical_examsRowChangeEvent" msprop:Generator_RowClassName="pet_historical_examsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Examination_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnExamination_Date" msprop:Generator_ColumnPropNameInRow="Examination_Date" msprop:Generator_ColumnPropNameInTable="Examination_DateColumn" msprop:Generator_UserColumnName="Examination Date" type="xs:dateTime" />
+              <xs:element name="Examination_x0020_Description" msprop:Generator_ColumnVarNameInTable="columnExamination_Description" msprop:Generator_ColumnPropNameInRow="Examination_Description" msprop:Generator_ColumnPropNameInTable="Examination_DescriptionColumn" msprop:Generator_UserColumnName="Examination Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5592405" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_x0020_name" msprop:Generator_ColumnVarNameInTable="columnPet_name" msprop:Generator_ColumnPropNameInRow="Pet_name" msprop:Generator_ColumnPropNameInTable="Pet_nameColumn" msprop:Generator_UserColumnName="Pet name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_x0020_type" msprop:Generator_ColumnVarNameInTable="columnPet_type" msprop:Generator_ColumnPropNameInRow="Pet_type" msprop:Generator_ColumnPropNameInTable="Pet_typeColumn" msprop:Generator_UserColumnName="Pet type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5592405" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_x0020_Description" msprop:Generator_ColumnVarNameInTable="columnPet_Description" msprop:Generator_ColumnPropNameInRow="Pet_Description" msprop:Generator_ColumnPropNameInTable="Pet_DescriptionColumn" msprop:Generator_UserColumnName="Pet Description" type="xs:string" />
+              <xs:element name="Examiner_x0020_number" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExaminer_number" msprop:Generator_ColumnPropNameInRow="Examiner_number" msprop:Generator_ColumnPropNameInTable="Examiner_numberColumn" msprop:Generator_UserColumnName="Examiner number" type="xs:int" />
+              <xs:element name="Examiner_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnExaminer_Name" msprop:Generator_ColumnPropNameInRow="Examiner_Name" msprop:Generator_ColumnPropNameInTable="Examiner_NameColumn" msprop:Generator_UserColumnName="Examiner Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pet_historical_exams" />
+      <xs:field xpath="mstns:Examination_x0020_Date" />
+      <xs:field xpath="mstns:Examiner_x0020_number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

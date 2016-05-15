@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B085BADA-21DE-4680-9979-08BC8692234D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zig_Zag</RootNamespace>
+    <AssemblyName>Zig Zag</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments.Designer.cs">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassUsers.cs" />
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet101.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet101.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet112.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet112.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet122.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet122.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet81.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet81.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="d25535935DataSet91.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet91.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examinations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examinations.Designer.cs">
+      <DependentUpon>Examinations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPass.Designer.cs">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionalWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionalWindow.Designer.cs">
+      <DependentUpon>FunctionalWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices.Designer.cs">
+      <DependentUpon>Invoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pens.Designer.cs">
+      <DependentUpon>Pens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pets.Designer.cs">
+      <DependentUpon>Pets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplies.Designer.cs">
+      <DependentUpon>Supplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemWin.Designer.cs">
+      <DependentUpon>SystemWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Treatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Treatment.Designer.cs">
+      <DependentUpon>Treatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAppointments.Designer.cs">
+      <DependentUpon>ViewAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCustomer.Designer.cs">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEmployees.Designer.cs">
+      <DependentUpon>ViewEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewExaminations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewExaminations.Designer.cs">
+      <DependentUpon>ViewExaminations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPet.Designer.cs">
+      <DependentUpon>ViewPet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSupplies.Designer.cs">
+      <DependentUpon>ViewSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTreatment.Designer.cs">
+      <DependentUpon>ViewTreatment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Appointments.resx">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examinations.resx">
+      <DependentUpon>Examinations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPass.resx">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionalWindow.resx">
+      <DependentUpon>FunctionalWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices.resx">
+      <DependentUpon>Invoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pens.resx">
+      <DependentUpon>Pens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pets.resx">
+      <DependentUpon>Pets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplies.resx">
+      <DependentUpon>Supplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemWin.resx">
+      <DependentUpon>SystemWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treatment.resx">
+      <DependentUpon>Treatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAppointments.resx">
+      <DependentUpon>ViewAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCustomer.resx">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEmployees.resx">
+      <DependentUpon>ViewEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewExaminations.resx">
+      <DependentUpon>ViewExaminations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPet.resx">
+      <DependentUpon>ViewPet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSupplies.resx">
+      <DependentUpon>ViewSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTreatment.resx">
+      <DependentUpon>ViewTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="d25535935DataSet.xsc">
+      <DependentUpon>d25535935DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet.xss">
+      <DependentUpon>d25535935DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet1.xsc">
+      <DependentUpon>d25535935DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet1.xss">
+      <DependentUpon>d25535935DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet101.xsc">
+      <DependentUpon>d25535935DataSet101.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet101.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet101.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet101.xss">
+      <DependentUpon>d25535935DataSet101.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet112.xsc">
+      <DependentUpon>d25535935DataSet112.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet112.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet112.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet112.xss">
+      <DependentUpon>d25535935DataSet112.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet122.xsc">
+      <DependentUpon>d25535935DataSet122.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet122.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet122.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet122.xss">
+      <DependentUpon>d25535935DataSet122.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet13.xsc">
+      <DependentUpon>d25535935DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet13.xss">
+      <DependentUpon>d25535935DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet14.xsc">
+      <DependentUpon>d25535935DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet14.xss">
+      <DependentUpon>d25535935DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet15.xsc">
+      <DependentUpon>d25535935DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet15.xss">
+      <DependentUpon>d25535935DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet16.xsc">
+      <DependentUpon>d25535935DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet16.xss">
+      <DependentUpon>d25535935DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet17.xsc">
+      <DependentUpon>d25535935DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet17.xss">
+      <DependentUpon>d25535935DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet18.xsc">
+      <DependentUpon>d25535935DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet18.xss">
+      <DependentUpon>d25535935DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet2.xsc">
+      <DependentUpon>d25535935DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet2.xss">
+      <DependentUpon>d25535935DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet3.xsc">
+      <DependentUpon>d25535935DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet3.xss">
+      <DependentUpon>d25535935DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet4.xsc">
+      <DependentUpon>d25535935DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet4.xss">
+      <DependentUpon>d25535935DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet5.xsc">
+      <DependentUpon>d25535935DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet5.xss">
+      <DependentUpon>d25535935DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet6.xsc">
+      <DependentUpon>d25535935DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet6.xss">
+      <DependentUpon>d25535935DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet7.xsc">
+      <DependentUpon>d25535935DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet7.xss">
+      <DependentUpon>d25535935DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet81.xsc">
+      <DependentUpon>d25535935DataSet81.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet81.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet81.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet81.xss">
+      <DependentUpon>d25535935DataSet81.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet91.xsc">
+      <DependentUpon>d25535935DataSet91.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet91.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet91.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet91.xss">
+      <DependentUpon>d25535935DataSet91.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigstock-Group-of-cats-and-dogs-in-fron-47035597.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon_e665%281%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon_e657%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zakes.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e096%281%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zakes1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\256718-cat-kittens-animals-baby_animals-white_background-736x459.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animals___Dogs_Funny_puppy_on_a_white_background_041650_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e00c%280%29_256b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e0ef%281%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e04d%283%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e087%282%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f0b6%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Icons_e30c%282%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_d83d%280%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Icons_e30c%282%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Icons_e30c%282%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_d83d%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linea_a4%281%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f129%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linecons_e01a%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e10f%282%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e111%281%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e113%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e10f%282%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animals___Dogs_Cute_boxer_on_a_white_background_050482_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animals dogs pugs white background 1920x1278 wallpaper_www.animalhi.com_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animals___Dogs_American_bulldog_puppy_on_white_background_049124_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon_e657%282%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e07c%281%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon_e604%283%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0fa%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f011%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconic_e069%284%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0f1%282%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0f0%281%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e081%283%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f022%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\120536339.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0a9%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\et-line_e006%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linecons_e02b%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0f8%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0f8%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0d6%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_e722%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themify_e699%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f081%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f04a%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f081%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f018%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f064%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f016%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e034%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e07b%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e0c3%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e066%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e040%280%29_2561.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

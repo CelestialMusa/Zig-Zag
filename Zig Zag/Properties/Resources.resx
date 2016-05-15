@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Entypo_e722(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Entypo_e722(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f0a9(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f0a9(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_a4(1)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linea_a4(1)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="animals dogs pugs white background 1920x1278 wallpaper_www.animalhi.com_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\animals dogs pugs white background 1920x1278 wallpaper_www.animalhi.com_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e0ef(1)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e0ef(1)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e081(3)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e081(3)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Animals___Dogs_Funny_puppy_on_a_white_background_041650_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Animals___Dogs_Funny_puppy_on_a_white_background_041650_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f0f1(2)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f0f1(2)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f081(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f081(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f011(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f011(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f0f8(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f0f8(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e10f(2)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e10f(2)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f0fa(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f0fa(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e096(1)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e096(1)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f0b6(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f0b6(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconic_e069(4)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconic_e069(4)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e10f(2)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e10f(2)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zakes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zakes1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linecons_e01a(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linecons_e01a(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="et-line_e006(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\et-line_e006(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f04a(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f04a(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e066(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e066(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e00c(0)_256b1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e00c(0)_256b1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f081(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f081(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e04d(3)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e04d(3)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e07c(1)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e07c(1)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f064(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f064(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f0f8(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f0f8(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f0d6(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f0d6(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linecons_e02b(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linecons_e02b(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="120536339" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\120536339.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e111(1)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e111(1)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f018(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f018(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="themify_e699(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\themify_e699(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icomoon_e604(3)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icomoon_e604(3)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="256718-cat-kittens-animals-baby_animals-white_background-736x459" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\256718-cat-kittens-animals-baby_animals-white_background-736x459.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zakes.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Animals___Dogs_American_bulldog_puppy_on_white_background_049124_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Animals___Dogs_American_bulldog_puppy_on_white_background_049124_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f0f0(1)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f0f0(1)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e087(2)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e087(2)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Entypo_d83d(0)_1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Entypo_d83d(0)_1024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e034(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e034(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icomoon_e657(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icomoon_e657(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Material Icons_e30c(2)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Material Icons_e30c(2)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Entypo_d83d(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Entypo_d83d(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f129(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f129(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FontAwesome_f022(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FontAwesome_f022(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Animals___Dogs_Cute_boxer_on_a_white_background_050482_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Animals___Dogs_Cute_boxer_on_a_white_background_050482_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icomoon_e665(1)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icomoon_e665(1)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e113(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e113(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e0c3(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e0c3(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icomoon_e657(2)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icomoon_e657(2)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bigstock-Group-of-cats-and-dogs-in-fron-47035597" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bigstock-Group-of-cats-and-dogs-in-fron-47035597.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Material Icons_e30c(2)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Material Icons_e30c(2)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e07b(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e07b(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octicons_f016(0)_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\octicons_f016(0)_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Material Icons_e30c(2)_1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Material Icons_e30c(2)_1024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Typicons_e040(0)_2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typicons_e040(0)_2561.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

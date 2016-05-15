@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d25535935DataSet10" targetNamespace="http://tempuri.org/d25535935DataSet101.xsd" xmlns:mstns="http://tempuri.org/d25535935DataSet101.xsd" xmlns="http://tempuri.org/d25535935DataSet101.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="d25535935ConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="d25535935ConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Zig_Zag.Properties.Settings.GlobalReference.Default.d25535935ConnectionString2" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_names_and_snumbers_over_50_yearsTableAdapter" GeneratorDataComponentClassName="list_names_and_snumbers_over_50_yearsTableAdapter" Name="list_names_and_snumbers_over_50_years" UserDataComponentName="list_names_and_snumbers_over_50_yearsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="d25535935ConnectionString2 (Settings)" DbObjectName="d25535935.list_names_and_snumbers_over_50_years" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Staff_Number`, `Staff_Name`, `Position` FROM `d25535935`.`list_names_and_snumbers_over_50_years`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Staff_Number" DataSetColumn="Staff_Number" />
+              <Mapping SourceColumn="Staff_Name" DataSetColumn="Staff_Name" />
+              <Mapping SourceColumn="Position" DataSetColumn="Position" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d25535935DataSet10" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="d25535935DataSet10" msprop:Generator_UserDSName="d25535935DataSet10">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_names_and_snumbers_over_50_years" msprop:Generator_TableClassName="list_names_and_snumbers_over_50_yearsDataTable" msprop:Generator_TableVarName="tablelist_names_and_snumbers_over_50_years" msprop:Generator_TablePropName="list_names_and_snumbers_over_50_years" msprop:Generator_RowDeletingName="list_names_and_snumbers_over_50_yearsRowDeleting" msprop:Generator_RowChangingName="list_names_and_snumbers_over_50_yearsRowChanging" msprop:Generator_RowEvHandlerName="list_names_and_snumbers_over_50_yearsRowChangeEventHandler" msprop:Generator_RowDeletedName="list_names_and_snumbers_over_50_yearsRowDeleted" msprop:Generator_UserTableName="list_names_and_snumbers_over_50_years" msprop:Generator_RowChangedName="list_names_and_snumbers_over_50_yearsRowChanged" msprop:Generator_RowEvArgName="list_names_and_snumbers_over_50_yearsRowChangeEvent" msprop:Generator_RowClassName="list_names_and_snumbers_over_50_yearsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Staff_Number" msprop:Generator_ColumnVarNameInTable="columnStaff_Number" msprop:Generator_ColumnPropNameInRow="Staff_Number" msprop:Generator_ColumnPropNameInTable="Staff_NumberColumn" msprop:Generator_UserColumnName="Staff_Number" type="xs:int" />
+              <xs:element name="Staff_Name" msprop:Generator_ColumnVarNameInTable="columnStaff_Name" msprop:Generator_ColumnPropNameInRow="Staff_Name" msprop:Generator_ColumnPropNameInTable="Staff_NameColumn" msprop:Generator_UserColumnName="Staff_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Position" msprop:Generator_ColumnVarNameInTable="columnPosition" msprop:Generator_ColumnPropNameInRow="Position" msprop:Generator_ColumnPropNameInTable="PositionColumn" msprop:Generator_UserColumnName="Position" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

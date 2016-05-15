@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d25535935DataSet11" targetNamespace="http://tempuri.org/d25535935DataSet112.xsd" xmlns:mstns="http://tempuri.org/d25535935DataSet112.xsd" xmlns="http://tempuri.org/d25535935DataSet112.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="d25535935ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="d25535935ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Zig_Zag.Properties.Settings.GlobalReference.Default.d25535935ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="details_of_pet_ownersTableAdapter" GeneratorDataComponentClassName="details_of_pet_ownersTableAdapter" Name="details_of_pet_owners" UserDataComponentName="details_of_pet_ownersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="d25535935ConnectionString (Settings)" DbObjectName="`d25535935`.`details_of_pet_owners`" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>`d25535935`.`details_of_pet_owners`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Owner_Number" DataSetColumn="Owner_Number" />
+              <Mapping SourceColumn="Owner_Name" DataSetColumn="Owner_Name" />
+              <Mapping SourceColumn="Pet_name" DataSetColumn="Pet_name" />
+              <Mapping SourceColumn="Pet_Description" DataSetColumn="Pet_Description" />
+              <Mapping SourceColumn="Pet_Status" DataSetColumn="Pet_Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d25535935DataSet11" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="d25535935DataSet11" msprop:Generator_UserDSName="d25535935DataSet11">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="details_of_pet_owners" msprop:Generator_TableClassName="details_of_pet_ownersDataTable" msprop:Generator_TableVarName="tabledetails_of_pet_owners" msprop:Generator_TablePropName="details_of_pet_owners" msprop:Generator_RowDeletingName="details_of_pet_ownersRowDeleting" msprop:Generator_RowChangingName="details_of_pet_ownersRowChanging" msprop:Generator_RowEvHandlerName="details_of_pet_ownersRowChangeEventHandler" msprop:Generator_RowDeletedName="details_of_pet_ownersRowDeleted" msprop:Generator_UserTableName="details_of_pet_owners" msprop:Generator_RowChangedName="details_of_pet_ownersRowChanged" msprop:Generator_RowEvArgName="details_of_pet_ownersRowChangeEvent" msprop:Generator_RowClassName="details_of_pet_ownersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Owner_Number" msprop:Generator_ColumnVarNameInTable="columnOwner_Number" msprop:Generator_ColumnPropNameInRow="Owner_Number" msprop:Generator_ColumnPropNameInTable="Owner_NumberColumn" msprop:Generator_UserColumnName="Owner_Number" type="xs:unsignedByte" />
+              <xs:element name="Owner_Name" msprop:Generator_ColumnVarNameInTable="columnOwner_Name" msprop:Generator_ColumnPropNameInRow="Owner_Name" msprop:Generator_ColumnPropNameInTable="Owner_NameColumn" msprop:Generator_UserColumnName="Owner_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_name" msprop:Generator_ColumnVarNameInTable="columnPet_name" msprop:Generator_ColumnPropNameInRow="Pet_name" msprop:Generator_ColumnPropNameInTable="Pet_nameColumn" msprop:Generator_UserColumnName="Pet_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_Description" msprop:Generator_ColumnVarNameInTable="columnPet_Description" msprop:Generator_ColumnPropNameInRow="Pet_Description" msprop:Generator_ColumnPropNameInTable="Pet_DescriptionColumn" msprop:Generator_UserColumnName="Pet_Description" type="xs:string" />
+              <xs:element name="Pet_Status" msprop:Generator_ColumnVarNameInTable="columnPet_Status" msprop:Generator_ColumnPropNameInRow="Pet_Status" msprop:Generator_ColumnPropNameInTable="Pet_StatusColumn" msprop:Generator_UserColumnName="Pet_Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:details_of_pet_owners" />
+      <xs:field xpath="mstns:Owner_Number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
