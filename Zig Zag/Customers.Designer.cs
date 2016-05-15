@@ -34,9 +34,13 @@
             this.labelViewAll = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxEditPetOwner = new System.Windows.Forms.ComboBox();
+            this.petownerdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.d25535935DataSet18 = new Zig_Zag.d25535935DataSet18();
             this.radioButtonEditPetOwner = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.labelNext = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -54,6 +58,15 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblRegStatus = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbPetType = new System.Windows.Forms.ComboBox();
+            this.txtPetname = new System.Windows.Forms.TextBox();
             this.dtpPetDOB = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.txtPetDescript = new System.Windows.Forms.TextBox();
@@ -97,26 +110,21 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.labelAdd = new System.Windows.Forms.Label();
             this.pictureBoxAddUserBTN = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbPetType = new System.Windows.Forms.ComboBox();
-            this.txtPetname = new System.Windows.Forms.TextBox();
-            this.lblRegStatus = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.d25535935DataSet18 = new Zig_Zag.d25535935DataSet18();
-            this.petownerdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pet_owner_detailsTableAdapter = new Zig_Zag.d25535935DataSet18TableAdapters.pet_owner_detailsTableAdapter();
+            this.d25535935DataSet19 = new Zig_Zag.d25535935DataSet19();
+            this.clinicdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clinic_detailsTableAdapter = new Zig_Zag.d25535935DataSet19TableAdapters.clinic_detailsTableAdapter();
             this.panel_AddUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petownerdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet18)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
             this.panelRemoveUser.SuspendLayout();
@@ -127,11 +135,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddUserBTN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petownerdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_AddUser
@@ -181,6 +186,16 @@
             this.comboBoxEditPetOwner.ValueMember = "Owner #";
             this.comboBoxEditPetOwner.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditPetOwner_SelectedIndexChanged);
             // 
+            // petownerdetailsBindingSource
+            // 
+            this.petownerdetailsBindingSource.DataMember = "pet_owner_details";
+            this.petownerdetailsBindingSource.DataSource = this.d25535935DataSet18;
+            // 
+            // d25535935DataSet18
+            // 
+            this.d25535935DataSet18.DataSetName = "d25535935DataSet18";
+            this.d25535935DataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // radioButtonEditPetOwner
             // 
             this.radioButtonEditPetOwner.AutoSize = true;
@@ -229,6 +244,26 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Page 1 of 2";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.pictureBox6.Location = new System.Drawing.Point(9, 38);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(838, 1);
+            this.pictureBox6.TabIndex = 73;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.label25.Location = new System.Drawing.Point(6, 22);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(207, 13);
+            this.label25.TabIndex = 72;
+            this.label25.Text = "Pet Owner Biographical Information";
             // 
             // labelNext
             // 
@@ -286,7 +321,7 @@
             // 
             this.txtID.Location = new System.Drawing.Point(329, 241);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(121, 20);
+            this.txtID.Size = new System.Drawing.Size(182, 20);
             this.txtID.TabIndex = 35;
             // 
             // label5
@@ -325,15 +360,21 @@
             // 
             // cmbClinic
             // 
+            this.cmbClinic.DataSource = this.clinicdetailsBindingSource;
+            this.cmbClinic.DisplayMember = "Clinic Address";
             this.cmbClinic.FormattingEnabled = true;
             this.cmbClinic.Location = new System.Drawing.Point(329, 275);
             this.cmbClinic.Name = "cmbClinic";
-            this.cmbClinic.Size = new System.Drawing.Size(202, 21);
+            this.cmbClinic.Size = new System.Drawing.Size(270, 21);
             this.cmbClinic.TabIndex = 28;
+            this.cmbClinic.ValueMember = "Clinic #";
             // 
             // cmbGender
             // 
             this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
             this.cmbGender.Location = new System.Drawing.Point(329, 134);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(121, 21);
@@ -350,14 +391,14 @@
             // 
             this.txtLast.Location = new System.Drawing.Point(329, 99);
             this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(302, 20);
+            this.txtLast.Size = new System.Drawing.Size(204, 20);
             this.txtLast.TabIndex = 24;
             // 
             // txtFirst
             // 
             this.txtFirst.Location = new System.Drawing.Point(329, 64);
             this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(302, 20);
+            this.txtFirst.Size = new System.Drawing.Size(250, 20);
             this.txtFirst.TabIndex = 23;
             // 
             // label1
@@ -402,6 +443,108 @@
             this.tabPage2.Text = "Page 2 of 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.pictureBox8.Location = new System.Drawing.Point(21, 225);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(838, 1);
+            this.pictureBox8.TabIndex = 75;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.pictureBox7.Location = new System.Drawing.Point(21, 43);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(838, 1);
+            this.pictureBox7.TabIndex = 74;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.label15.Location = new System.Drawing.Point(18, 208);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.TabIndex = 72;
+            this.label15.Text = "Address";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.label2.Location = new System.Drawing.Point(18, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Pet Details";
+            // 
+            // lblRegStatus
+            // 
+            this.lblRegStatus.AutoSize = true;
+            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.lblRegStatus.Location = new System.Drawing.Point(212, 392);
+            this.lblRegStatus.Name = "lblRegStatus";
+            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblRegStatus.TabIndex = 70;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(212, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "Pet type";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(212, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 68;
+            this.label7.Text = "Pet name";
+            // 
+            // cmbPetType
+            // 
+            this.cmbPetType.FormattingEnabled = true;
+            this.cmbPetType.Items.AddRange(new object[] {
+            "Dog",
+            "Cat",
+            "Rabbit",
+            "Ferret",
+            "Rodent ",
+            "Gerbil",
+            "Hamster",
+            "Chinchilla",
+            "Rat",
+            "Guinea pig",
+            "Canary",
+            "Parakeet",
+            "Parrot",
+            "Turtle",
+            "Lizard",
+            "Snake",
+            "Goldfish",
+            "Tropical fish"});
+            this.cmbPetType.Location = new System.Drawing.Point(329, 105);
+            this.cmbPetType.Name = "cmbPetType";
+            this.cmbPetType.Size = new System.Drawing.Size(157, 21);
+            this.cmbPetType.TabIndex = 67;
+            // 
+            // txtPetname
+            // 
+            this.txtPetname.Location = new System.Drawing.Point(329, 69);
+            this.txtPetname.Name = "txtPetname";
+            this.txtPetname.Size = new System.Drawing.Size(200, 20);
+            this.txtPetname.TabIndex = 66;
+            // 
             // dtpPetDOB
             // 
             this.dtpPetDOB.Location = new System.Drawing.Point(329, 170);
@@ -421,6 +564,7 @@
             // txtPetDescript
             // 
             this.txtPetDescript.Location = new System.Drawing.Point(329, 139);
+            this.txtPetDescript.Multiline = true;
             this.txtPetDescript.Name = "txtPetDescript";
             this.txtPetDescript.Size = new System.Drawing.Size(302, 20);
             this.txtPetDescript.TabIndex = 59;
@@ -449,7 +593,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(212, 312);
+            this.label16.Location = new System.Drawing.Point(212, 242);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(35, 13);
             this.label16.TabIndex = 53;
@@ -467,7 +611,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(212, 276);
+            this.label18.Location = new System.Drawing.Point(212, 277);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(24, 13);
             this.label18.TabIndex = 51;
@@ -475,22 +619,22 @@
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(329, 274);
+            this.txtCity.Location = new System.Drawing.Point(329, 275);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(302, 20);
+            this.txtCity.Size = new System.Drawing.Size(204, 20);
             this.txtCity.TabIndex = 43;
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(329, 239);
+            this.txtState.Location = new System.Drawing.Point(329, 311);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(302, 20);
+            this.txtState.Size = new System.Drawing.Size(182, 20);
             this.txtState.TabIndex = 42;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(212, 242);
+            this.label24.Location = new System.Drawing.Point(212, 314);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(32, 13);
             this.label24.TabIndex = 41;
@@ -505,7 +649,7 @@
             // 
             // txtStreet
             // 
-            this.txtStreet.Location = new System.Drawing.Point(329, 309);
+            this.txtStreet.Location = new System.Drawing.Point(329, 239);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(302, 20);
             this.txtStreet.TabIndex = 0;
@@ -831,122 +975,23 @@
             this.pictureBoxAddUserBTN.TabIndex = 88;
             this.pictureBoxAddUserBTN.TabStop = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(212, 108);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 69;
-            this.label9.Text = "Pet type";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(212, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 68;
-            this.label7.Text = "Pet name";
-            // 
-            // cmbPetType
-            // 
-            this.cmbPetType.FormattingEnabled = true;
-            this.cmbPetType.Location = new System.Drawing.Point(329, 105);
-            this.cmbPetType.Name = "cmbPetType";
-            this.cmbPetType.Size = new System.Drawing.Size(157, 21);
-            this.cmbPetType.TabIndex = 67;
-            // 
-            // txtPetname
-            // 
-            this.txtPetname.Location = new System.Drawing.Point(329, 69);
-            this.txtPetname.Name = "txtPetname";
-            this.txtPetname.Size = new System.Drawing.Size(200, 20);
-            this.txtPetname.TabIndex = 66;
-            // 
-            // lblRegStatus
-            // 
-            this.lblRegStatus.AutoSize = true;
-            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.lblRegStatus.Location = new System.Drawing.Point(212, 392);
-            this.lblRegStatus.Name = "lblRegStatus";
-            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
-            this.lblRegStatus.TabIndex = 70;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.label2.Location = new System.Drawing.Point(18, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "Pet Details";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.label15.Location = new System.Drawing.Point(18, 208);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 13);
-            this.label15.TabIndex = 72;
-            this.label15.Text = "Address";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.label25.Location = new System.Drawing.Point(6, 22);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(207, 13);
-            this.label25.TabIndex = 72;
-            this.label25.Text = "Pet Owner Biographical Information";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.pictureBox6.Location = new System.Drawing.Point(9, 38);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(838, 1);
-            this.pictureBox6.TabIndex = 73;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.pictureBox7.Location = new System.Drawing.Point(21, 43);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(838, 1);
-            this.pictureBox7.TabIndex = 74;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.pictureBox8.Location = new System.Drawing.Point(21, 225);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(838, 1);
-            this.pictureBox8.TabIndex = 75;
-            this.pictureBox8.TabStop = false;
-            // 
-            // d25535935DataSet18
-            // 
-            this.d25535935DataSet18.DataSetName = "d25535935DataSet18";
-            this.d25535935DataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // petownerdetailsBindingSource
-            // 
-            this.petownerdetailsBindingSource.DataMember = "pet_owner_details";
-            this.petownerdetailsBindingSource.DataSource = this.d25535935DataSet18;
-            // 
             // pet_owner_detailsTableAdapter
             // 
             this.pet_owner_detailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // d25535935DataSet19
+            // 
+            this.d25535935DataSet19.DataSetName = "d25535935DataSet19";
+            this.d25535935DataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clinicdetailsBindingSource
+            // 
+            this.clinicdetailsBindingSource.DataMember = "clinic_details";
+            this.clinicdetailsBindingSource.DataSource = this.d25535935DataSet19;
+            // 
+            // clinic_detailsTableAdapter
+            // 
+            this.clinic_detailsTableAdapter.ClearBeforeFill = true;
             // 
             // Customers
             // 
@@ -976,12 +1021,17 @@
             this.panel_AddUser.ResumeLayout(false);
             this.panel_AddUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petownerdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet18)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
             this.panelRemoveUser.ResumeLayout(false);
@@ -993,11 +1043,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddUserBTN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petownerdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1086,5 +1133,8 @@
         private d25535935DataSet18 d25535935DataSet18;
         private System.Windows.Forms.BindingSource petownerdetailsBindingSource;
         private d25535935DataSet18TableAdapters.pet_owner_detailsTableAdapter pet_owner_detailsTableAdapter;
+        private d25535935DataSet19 d25535935DataSet19;
+        private System.Windows.Forms.BindingSource clinicdetailsBindingSource;
+        private d25535935DataSet19TableAdapters.clinic_detailsTableAdapter clinic_detailsTableAdapter;
     }
 }

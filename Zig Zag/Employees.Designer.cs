@@ -42,6 +42,19 @@
             this.d25535935DataSet17 = new Zig_Zag.d25535935DataSet17();
             this.radioButtonEditEmployee = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblRegStatus = new System.Windows.Forms.Label();
+            this.labelSubmit = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxCity = new System.Windows.Forms.TextBox();
+            this.textBox1State = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBoxZipCode = new System.Windows.Forms.TextBox();
+            this.textBoxStreet = new System.Windows.Forms.TextBox();
+            this.pictureBoxGo = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label29 = new System.Windows.Forms.Label();
             this.lblR5 = new System.Windows.Forms.Label();
@@ -75,19 +88,6 @@
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lblRegStatus = new System.Windows.Forms.Label();
-            this.labelSubmit = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxCity = new System.Windows.Forms.TextBox();
-            this.textBox1State = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBoxZipCode = new System.Windows.Forms.TextBox();
-            this.textBoxStreet = new System.Windows.Forms.TextBox();
-            this.pictureBoxGo = new System.Windows.Forms.PictureBox();
             this.radioButtonAddEmployee = new System.Windows.Forms.RadioButton();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
             this.panelRemoveUser = new System.Windows.Forms.Panel();
@@ -124,14 +124,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.liststaffmembersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet17)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet15)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
             this.panelRemoveUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -260,13 +260,145 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(0, 58);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(886, 464);
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.lblRegStatus);
+            this.tabPage2.Controls.Add(this.labelSubmit);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.textBoxCity);
+            this.tabPage2.Controls.Add(this.textBox1State);
+            this.tabPage2.Controls.Add(this.label24);
+            this.tabPage2.Controls.Add(this.textBoxZipCode);
+            this.tabPage2.Controls.Add(this.textBoxStreet);
+            this.tabPage2.Controls.Add(this.pictureBoxGo);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(878, 438);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Page 2 of 2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.label19.Location = new System.Drawing.Point(18, 24);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(110, 13);
+            this.label19.TabIndex = 57;
+            this.label19.Text = "Employee Address";
+            // 
+            // lblRegStatus
+            // 
+            this.lblRegStatus.AutoSize = true;
+            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.lblRegStatus.Location = new System.Drawing.Point(253, 260);
+            this.lblRegStatus.Name = "lblRegStatus";
+            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblRegStatus.TabIndex = 56;
+            // 
+            // labelSubmit
+            // 
+            this.labelSubmit.AutoSize = true;
+            this.labelSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.labelSubmit.Location = new System.Drawing.Point(800, 417);
+            this.labelSubmit.Name = "labelSubmit";
+            this.labelSubmit.Size = new System.Drawing.Size(45, 13);
+            this.labelSubmit.TabIndex = 55;
+            this.labelSubmit.Text = "Submit";
+            this.labelSubmit.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(253, 142);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 13);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "Street";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(253, 177);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(49, 13);
+            this.label17.TabIndex = 52;
+            this.label17.Text = "Zip code";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(253, 106);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(24, 13);
+            this.label18.TabIndex = 51;
+            this.label18.Text = "City";
+            // 
+            // textBoxCity
+            // 
+            this.textBoxCity.Location = new System.Drawing.Point(329, 104);
+            this.textBoxCity.Name = "textBoxCity";
+            this.textBoxCity.Size = new System.Drawing.Size(302, 20);
+            this.textBoxCity.TabIndex = 43;
+            // 
+            // textBox1State
+            // 
+            this.textBox1State.Location = new System.Drawing.Point(329, 69);
+            this.textBox1State.Name = "textBox1State";
+            this.textBox1State.Size = new System.Drawing.Size(302, 20);
+            this.textBox1State.TabIndex = 42;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(253, 72);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(32, 13);
+            this.label24.TabIndex = 41;
+            this.label24.Text = "State";
+            // 
+            // textBoxZipCode
+            // 
+            this.textBoxZipCode.Location = new System.Drawing.Point(329, 174);
+            this.textBoxZipCode.Name = "textBoxZipCode";
+            this.textBoxZipCode.Size = new System.Drawing.Size(100, 20);
+            this.textBoxZipCode.TabIndex = 1;
+            // 
+            // textBoxStreet
+            // 
+            this.textBoxStreet.Location = new System.Drawing.Point(329, 139);
+            this.textBoxStreet.Name = "textBoxStreet";
+            this.textBoxStreet.Size = new System.Drawing.Size(302, 20);
+            this.textBoxStreet.TabIndex = 0;
+            // 
+            // pictureBoxGo
+            // 
+            this.pictureBoxGo.BackgroundImage = global::Zig_Zag.Properties.Resources.linecons_e01a_0__2561;
+            this.pictureBoxGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxGo.Location = new System.Drawing.Point(776, 349);
+            this.pictureBoxGo.Name = "pictureBoxGo";
+            this.pictureBoxGo.Size = new System.Drawing.Size(96, 65);
+            this.pictureBoxGo.TabIndex = 54;
+            this.pictureBoxGo.TabStop = false;
+            this.pictureBoxGo.Click += new System.EventHandler(this.pictureBoxGo_Click);
+            this.pictureBoxGo.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
+            this.pictureBoxGo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseMove);
             // 
             // tabPage1
             // 
@@ -592,138 +724,6 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 22;
             this.label1.Text = "First name";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.lblRegStatus);
-            this.tabPage2.Controls.Add(this.labelSubmit);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.textBoxCity);
-            this.tabPage2.Controls.Add(this.textBox1State);
-            this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.textBoxZipCode);
-            this.tabPage2.Controls.Add(this.textBoxStreet);
-            this.tabPage2.Controls.Add(this.pictureBoxGo);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(878, 438);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Page 2 of 2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.label19.Location = new System.Drawing.Point(18, 24);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 13);
-            this.label19.TabIndex = 57;
-            this.label19.Text = "Employee Address";
-            // 
-            // lblRegStatus
-            // 
-            this.lblRegStatus.AutoSize = true;
-            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.lblRegStatus.Location = new System.Drawing.Point(253, 260);
-            this.lblRegStatus.Name = "lblRegStatus";
-            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
-            this.lblRegStatus.TabIndex = 56;
-            // 
-            // labelSubmit
-            // 
-            this.labelSubmit.AutoSize = true;
-            this.labelSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.labelSubmit.Location = new System.Drawing.Point(800, 417);
-            this.labelSubmit.Name = "labelSubmit";
-            this.labelSubmit.Size = new System.Drawing.Size(45, 13);
-            this.labelSubmit.TabIndex = 55;
-            this.labelSubmit.Text = "Submit";
-            this.labelSubmit.Visible = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(253, 142);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 13);
-            this.label16.TabIndex = 53;
-            this.label16.Text = "Street";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(253, 177);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 13);
-            this.label17.TabIndex = 52;
-            this.label17.Text = "Zip code";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(253, 106);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(24, 13);
-            this.label18.TabIndex = 51;
-            this.label18.Text = "City";
-            // 
-            // textBoxCity
-            // 
-            this.textBoxCity.Location = new System.Drawing.Point(329, 104);
-            this.textBoxCity.Name = "textBoxCity";
-            this.textBoxCity.Size = new System.Drawing.Size(302, 20);
-            this.textBoxCity.TabIndex = 43;
-            // 
-            // textBox1State
-            // 
-            this.textBox1State.Location = new System.Drawing.Point(329, 69);
-            this.textBox1State.Name = "textBox1State";
-            this.textBox1State.Size = new System.Drawing.Size(302, 20);
-            this.textBox1State.TabIndex = 42;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(253, 72);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(32, 13);
-            this.label24.TabIndex = 41;
-            this.label24.Text = "State";
-            // 
-            // textBoxZipCode
-            // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(329, 174);
-            this.textBoxZipCode.Name = "textBoxZipCode";
-            this.textBoxZipCode.Size = new System.Drawing.Size(100, 20);
-            this.textBoxZipCode.TabIndex = 1;
-            // 
-            // textBoxStreet
-            // 
-            this.textBoxStreet.Location = new System.Drawing.Point(329, 139);
-            this.textBoxStreet.Name = "textBoxStreet";
-            this.textBoxStreet.Size = new System.Drawing.Size(302, 20);
-            this.textBoxStreet.TabIndex = 0;
-            // 
-            // pictureBoxGo
-            // 
-            this.pictureBoxGo.BackgroundImage = global::Zig_Zag.Properties.Resources.linecons_e01a_0__2561;
-            this.pictureBoxGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxGo.Location = new System.Drawing.Point(776, 349);
-            this.pictureBoxGo.Name = "pictureBoxGo";
-            this.pictureBoxGo.Size = new System.Drawing.Size(96, 65);
-            this.pictureBoxGo.TabIndex = 54;
-            this.pictureBoxGo.TabStop = false;
-            this.pictureBoxGo.Click += new System.EventHandler(this.pictureBoxGo_Click);
-            this.pictureBoxGo.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
-            this.pictureBoxGo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseMove);
             // 
             // radioButtonAddEmployee
             // 
@@ -1073,6 +1073,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.liststaffmembersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet17)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1080,9 +1083,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet15)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
             this.panelRemoveUser.ResumeLayout(false);
             this.panelRemoveUser.PerformLayout();

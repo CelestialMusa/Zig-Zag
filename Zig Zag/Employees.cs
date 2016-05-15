@@ -345,7 +345,7 @@ namespace Zig_Zag
             if (radioButtonEditEmployee.Checked == true)
             {
                 comboBoxEditEmployee.Enabled = true;
-                loadCombo();
+                //loadCombo();
             }
         }
 
@@ -364,7 +364,6 @@ namespace Zig_Zag
                 command.Connection = connection;
                 command.CommandText = "get_employee";
                 command.CommandType = CommandType.StoredProcedure;
-
                 command.Parameters.Add(new MySqlParameter("@staff_num", MySqlDbType.Int32)).Value = staff_num;
 
                 reader = command.ExecuteReader();
@@ -505,6 +504,11 @@ namespace Zig_Zag
             this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet16.clinic_details);
             // TODO: This line of code loads data into the 'd25535935DataSet15.job' table. You can move, or remove it, as needed.
             this.jobTableAdapter.Fill(this.d25535935DataSet15.job);
+
+            comboBoxEditEmployee.Enabled = false;
+            comboBoxEditEmployee.Text = "";
+            comboBoxClinicID.Text = "";
+            
         } 
     }
 }

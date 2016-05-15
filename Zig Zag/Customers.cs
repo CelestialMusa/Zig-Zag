@@ -107,6 +107,7 @@ namespace Zig_Zag
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPage2;
+            txtPetname.Focus();
         }
 
         private void pictureBoxGo_MouseMove(object sender, MouseEventArgs e)
@@ -134,7 +135,19 @@ namespace Zig_Zag
             if(radioButtonAddPetOwner.Checked)
             {
                 comboBoxEditPetOwner.Enabled = false;
-                loadDetails();
+                txtFirst.Text = "";
+                txtCity.Text = "";
+                txtID.Text = "";
+                txtLast.Text = "";
+                txtPetDescript.Text = "";
+                txtPetname.Text = "";
+                txtState.Text = "";
+                txtStreet.Text = "";
+                txtTel.Text = "";
+                txtZip.Text = "";
+                cmbClinic.Text = "";
+                cmbGender.Text = "";
+                cmbPetType.Text = "";
             }
         }
 
@@ -143,7 +156,8 @@ namespace Zig_Zag
             if (radioButtonEditPetOwner.Checked)
             {
                 comboBoxEditPetOwner.Enabled = true;
-
+                comboBoxEditPetOwner.Text = comboBoxEditPetOwner.SelectedText;
+                //loadDetails();
             }
         }
 
@@ -151,7 +165,7 @@ namespace Zig_Zag
         {
             try
             {
-                int owner_num = (int)comboBoxEditPetOwner.SelectedValue;
+                byte owner_num = (byte) comboBoxEditPetOwner.SelectedValue;
                 connection.Open();
                 command = new MySqlCommand();
                 command.Connection = connection;
@@ -174,16 +188,23 @@ namespace Zig_Zag
                     txtPetname.Text = (reader["PET_NAME"].ToString());
                     txtPetDescript.Text = (reader["PET_DESCRIPTION"].ToString());
                     cmbPetType.Text = (reader["STATE"].ToString());
-                    dtpPetDOB.Text = (reader["CITY"].ToString());
+                    dtpPetDOB.Text = (reader["PET_DOB"].ToString());
                     txtState.Text = (reader["STATE"].ToString());
                     txtZip.Text = (reader["ZIPCODE"].ToString());
                     txtCity.Text = (reader["CITY"].ToString());
                     txtStreet.Text = (reader["STREET"].ToString());
                 }
+
+                if (cmbGender.Text == "1")
+                {
+                    cmbGender.Text = "Male";
+                }
+                else
+                    cmbGender.Text = "Female";
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -203,12 +224,20 @@ namespace Zig_Zag
             string tel = txtTel.Text;
             string id_no = txtID.Text;
             string gender = cmbGender.Text;
-            string dob = dtPicker.Text;
-            string clinic_id = cmbClinic.Text;
+            if(gender=="Male")
+            {
+                gender = "1";
+            }
+            else if(gender == "Female")
+            {
+                gender = "0";
+            }
+            string dob = dtPicker.Value.ToShortDateString();
+            byte clinic_id = (byte) cmbClinic.SelectedValue;
             string pname = txtPetname.Text;
             string pdescript = txtPetDescript.Text;
             string petType = cmbPetType.Text;
-            string petDOB = dtpPetDOB.Text;
+            string petDOB = dtpPetDOB.Value.ToShortDateString();
             string street = txtState.Text;
             string city = txtCity.Text;
             string state = txtState.Text;
@@ -220,12 +249,12 @@ namespace Zig_Zag
             }
             else if(radioButtonEditPetOwner.Checked)
             {
-                int owner_num = (int)comboBoxEditPetOwner.SelectedValue;
+                byte owner_num = (byte)comboBoxEditPetOwner.SelectedValue;
                 updatePetOwner(owner_num,fname, lname, tel, id_no, gender, dob, clinic_id, pname, petType, pdescript, petDOB, street, city, state, zip);
             }
         }
 
-        private void insertOwner(string fname, string lname, string tel, string id_no, string gender, string dob, string clinic_id,
+        private void insertOwner(string fname, string lname, string tel, string id_no, string gender, string dob, byte clinic_id,
                                 string pname, string petType, string pdescript, string petDOB, string street, string city, string state, string zip)
         {
             try
@@ -236,7 +265,8 @@ namespace Zig_Zag
                 command.CommandText = "insert_pet_owner";
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.Int32)).Value = street;
+
+                command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
                 command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
                 command.Parameters.Add(new MySqlParameter("@state", MySqlDbType.VarChar)).Value = state;
                 command.Parameters.Add(new MySqlParameter("@zipcode", MySqlDbType.VarChar)).Value = zip;
@@ -244,13 +274,13 @@ namespace Zig_Zag
                 command.Parameters.Add(new MySqlParameter("@last_name", MySqlDbType.VarChar)).Value = lname;
                 command.Parameters.Add(new MySqlParameter("@tel", MySqlDbType.VarChar)).Value = tel;
                 command.Parameters.Add(new MySqlParameter("@id_no", MySqlDbType.VarChar)).Value = id_no;
-                command.Parameters.Add(new MySqlParameter("@gender", MySqlDbType.Date)).Value = gender;
-                command.Parameters.Add(new MySqlParameter("@dob", MySqlDbType.Bit)).Value = dob;
-                command.Parameters.Add(new MySqlParameter("@clinic", MySqlDbType.Int32)).Value = clinic_id;
-                command.Parameters.Add(new MySqlParameter("@pet_name", MySqlDbType.Double)).Value = pname;
-                command.Parameters.Add(new MySqlParameter("@pet_type", MySqlDbType.Int32)).Value = petType;
-                command.Parameters.Add(new MySqlParameter("@pet_descript", MySqlDbType.VarChar)).Value = pdescript;
-                command.Parameters.Add(new MySqlParameter("@pet_dob", MySqlDbType.VarChar)).Value = petDOB;
+                command.Parameters.Add(new MySqlParameter("@gender", MySqlDbType.Bit)).Value = gender;
+                command.Parameters.Add(new MySqlParameter("@dob", MySqlDbType.Date)).Value = dob;
+                command.Parameters.Add(new MySqlParameter("@clinic", MySqlDbType.Bit)).Value = clinic_id;
+                command.Parameters.Add(new MySqlParameter("@pet_name", MySqlDbType.VarChar)).Value = pname;
+                command.Parameters.Add(new MySqlParameter("@pet_type", MySqlDbType.MediumText)).Value = petType;
+                command.Parameters.Add(new MySqlParameter("@pet_descript", MySqlDbType.LongText)).Value = pdescript;
+                command.Parameters.Add(new MySqlParameter("@pet_dob", MySqlDbType.Date)).Value = petDOB;
 
 
                 reader = command.ExecuteReader();
@@ -269,7 +299,7 @@ namespace Zig_Zag
             }
         }
 
-        private void updatePetOwner(int owner_num,string fname, string lname, string tel, string id_no, string gender, string dob, string clinic_id,
+        private void updatePetOwner(byte owner_num, string fname, string lname, string tel, string id_no, string gender, string dob, byte clinic_id,
                                 string pname, string petType, string pdescript, string petDOB, string street, string city, string state, string zip)
         {
             try
@@ -280,6 +310,7 @@ namespace Zig_Zag
                 command.CommandText = "update_pet_owner";
                 command.CommandType = CommandType.StoredProcedure;
 
+                command.Parameters.Add(new MySqlParameter("@owner_num", MySqlDbType.Bit)).Value = owner_num;
                 command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
                 command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
                 command.Parameters.Add(new MySqlParameter("@state", MySqlDbType.VarChar)).Value = state;
@@ -288,12 +319,12 @@ namespace Zig_Zag
                 command.Parameters.Add(new MySqlParameter("@last_name", MySqlDbType.VarChar)).Value = lname;
                 command.Parameters.Add(new MySqlParameter("@tel", MySqlDbType.VarChar)).Value = tel;
                 command.Parameters.Add(new MySqlParameter("@id_no", MySqlDbType.VarChar)).Value = id_no;
-                command.Parameters.Add(new MySqlParameter("@gender", MySqlDbType.Bit    )).Value = gender;
+                command.Parameters.Add(new MySqlParameter("@gender", MySqlDbType.Bit)).Value = gender;
                 command.Parameters.Add(new MySqlParameter("@dob", MySqlDbType.Date)).Value = dob;
                 command.Parameters.Add(new MySqlParameter("@clinic", MySqlDbType.Bit)).Value = clinic_id;
                 command.Parameters.Add(new MySqlParameter("@pet_name", MySqlDbType.VarChar)).Value = pname;
-                command.Parameters.Add(new MySqlParameter("@pet_type", MySqlDbType.VarChar)).Value = petType;
-                command.Parameters.Add(new MySqlParameter("@pet_descript", MySqlDbType.VarChar)).Value = pdescript;
+                command.Parameters.Add(new MySqlParameter("@pet_type", MySqlDbType.MediumText)).Value = petType;
+                command.Parameters.Add(new MySqlParameter("@pet_descript", MySqlDbType.LongText)).Value = pdescript;
                 command.Parameters.Add(new MySqlParameter("@pet_dob", MySqlDbType.Date)).Value = petDOB;
 
                 reader = command.ExecuteReader();
@@ -314,8 +345,14 @@ namespace Zig_Zag
 
         private void Customers_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'd25535935DataSet19.clinic_details' table. You can move, or remove it, as needed.
+            this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet19.clinic_details);
             // TODO: This line of code loads data into the 'd25535935DataSet18.pet_owner_details' table. You can move, or remove it, as needed.
             this.pet_owner_detailsTableAdapter.Fill(this.d25535935DataSet18.pet_owner_details);
+            comboBoxEditPetOwner.Enabled = false;
+            comboBoxEditPetOwner.Text = "";
+            cmbClinic.Text = "";
+            txtFirst.Focus();
         }
     }
 }
