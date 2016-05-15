@@ -508,7 +508,6 @@ namespace Zig_Zag
             comboBoxEditEmployee.Enabled = false;
             comboBoxEditEmployee.Text = "";
             comboBoxClinicID.Text = "";
-            
         } 
     }
 }

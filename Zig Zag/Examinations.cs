@@ -104,5 +104,16 @@ namespace Zig_Zag
             pictureBox1.BackgroundImage = image;
             label2.Visible = false;
         }
+
+        private void Examinations_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'd25535935DataSet21.treatment_type' table. You can move, or remove it, as needed.
+            this.treatment_typeTableAdapter.Fill(this.d25535935DataSet21.treatment_type);
+            // TODO: This line of code loads data into the 'd25535935DataSet20.pet' table. You can move, or remove it, as needed.
+            this.petTableAdapter.Fill(this.d25535935DataSet20.pet);
+            // TODO: This line of code loads data into the 'd25535935DataSet17.list_staff_members' table. You can move, or remove it, as needed.
+            this.list_staff_membersTableAdapter.Fill(this.d25535935DataSet17.list_staff_members);
+
+        }
     }
 }

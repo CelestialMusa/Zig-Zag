@@ -52,6 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.cmbClinic = new System.Windows.Forms.ComboBox();
+            this.clinicdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.d25535935DataSet19 = new Zig_Zag.d25535935DataSet19();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.dtPicker = new System.Windows.Forms.DateTimePicker();
             this.txtLast = new System.Windows.Forms.TextBox();
@@ -111,8 +113,6 @@
             this.labelAdd = new System.Windows.Forms.Label();
             this.pictureBoxAddUserBTN = new System.Windows.Forms.PictureBox();
             this.pet_owner_detailsTableAdapter = new Zig_Zag.d25535935DataSet18TableAdapters.pet_owner_detailsTableAdapter();
-            this.d25535935DataSet19 = new Zig_Zag.d25535935DataSet19();
-            this.clinicdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clinic_detailsTableAdapter = new Zig_Zag.d25535935DataSet19TableAdapters.clinic_detailsTableAdapter();
             this.panel_AddUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,6 +122,8 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet19)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -135,8 +137,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddUserBTN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_AddUser
@@ -368,6 +368,16 @@
             this.cmbClinic.Size = new System.Drawing.Size(270, 21);
             this.cmbClinic.TabIndex = 28;
             this.cmbClinic.ValueMember = "Clinic #";
+            // 
+            // clinicdetailsBindingSource
+            // 
+            this.clinicdetailsBindingSource.DataMember = "clinic_details";
+            this.clinicdetailsBindingSource.DataSource = this.d25535935DataSet19;
+            // 
+            // d25535935DataSet19
+            // 
+            this.d25535935DataSet19.DataSetName = "d25535935DataSet19";
+            this.d25535935DataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmbGender
             // 
@@ -979,16 +989,6 @@
             // 
             this.pet_owner_detailsTableAdapter.ClearBeforeFill = true;
             // 
-            // d25535935DataSet19
-            // 
-            this.d25535935DataSet19.DataSetName = "d25535935DataSet19";
-            this.d25535935DataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clinicdetailsBindingSource
-            // 
-            this.clinicdetailsBindingSource.DataMember = "clinic_details";
-            this.clinicdetailsBindingSource.DataSource = this.d25535935DataSet19;
-            // 
             // clinic_detailsTableAdapter
             // 
             this.clinic_detailsTableAdapter.ClearBeforeFill = true;
@@ -1028,6 +1028,8 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet19)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -1043,8 +1045,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddUserBTN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

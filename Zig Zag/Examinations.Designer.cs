@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examinations));
             this.panel_AddUser = new System.Windows.Forms.Panel();
             this.labelViewAll = new System.Windows.Forms.Label();
@@ -67,6 +68,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUserProfile = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.d25535935DataSet17 = new Zig_Zag.d25535935DataSet17();
+            this.liststaffmembersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.list_staff_membersTableAdapter = new Zig_Zag.d25535935DataSet17TableAdapters.list_staff_membersTableAdapter();
+            this.d25535935DataSet20 = new Zig_Zag.d25535935DataSet20();
+            this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petTableAdapter = new Zig_Zag.d25535935DataSet20TableAdapters.petTableAdapter();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.d25535935DataSet21 = new Zig_Zag.d25535935DataSet21();
+            this.treatmenttypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.treatment_typeTableAdapter = new Zig_Zag.d25535935DataSet21TableAdapters.treatment_typeTableAdapter();
             this.panel_AddUser.SuspendLayout();
             this.tabControlPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -77,6 +91,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liststaffmembersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatmenttypeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_AddUser
@@ -112,6 +134,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox6);
+            this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.comboBox3);
             this.tabPage1.Controls.Add(this.comboBox2);
@@ -150,6 +174,9 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
             this.comboBox2.Location = new System.Drawing.Point(352, 190);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(89, 21);
@@ -157,11 +184,14 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.liststaffmembersBindingSource;
+            this.comboBox1.DisplayMember = "Staff_Name";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(352, 155);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(187, 21);
             this.comboBox1.TabIndex = 58;
+            this.comboBox1.ValueMember = "Staff_Number";
             // 
             // labelSubmit
             // 
@@ -225,11 +255,14 @@
             // 
             // comboBoxGender
             // 
+            this.comboBoxGender.DataSource = this.petBindingSource;
+            this.comboBoxGender.DisplayMember = "PET_DESCRIPTION";
             this.comboBoxGender.FormattingEnabled = true;
             this.comboBoxGender.Location = new System.Drawing.Point(352, 119);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(258, 21);
+            this.comboBoxGender.Size = new System.Drawing.Size(498, 21);
             this.comboBoxGender.TabIndex = 27;
+            this.comboBoxGender.ValueMember = "PET_ID";
             // 
             // label1
             // 
@@ -242,6 +275,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox3);
+            this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.listBox1);
             this.tabPage2.Controls.Add(this.textBox3);
@@ -267,7 +302,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(447, 373);
+            this.button1.Location = new System.Drawing.Point(447, 380);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 23);
             this.button1.TabIndex = 80;
@@ -277,35 +312,35 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(338, 233);
+            this.listBox1.Location = new System.Drawing.Point(338, 240);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(258, 134);
             this.listBox1.TabIndex = 79;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(338, 178);
+            this.textBox3.Location = new System.Drawing.Point(338, 185);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(258, 20);
             this.textBox3.TabIndex = 78;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(338, 102);
+            this.dateTimePicker2.Location = new System.Drawing.Point(338, 109);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 77;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(338, 66);
+            this.dateTimePicker1.Location = new System.Drawing.Point(338, 73);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 76;
             // 
             // buttonAddTreatment
             // 
-            this.buttonAddTreatment.Location = new System.Drawing.Point(447, 204);
+            this.buttonAddTreatment.Location = new System.Drawing.Point(447, 211);
             this.buttonAddTreatment.Name = "buttonAddTreatment";
             this.buttonAddTreatment.Size = new System.Drawing.Size(47, 23);
             this.buttonAddTreatment.TabIndex = 75;
@@ -315,7 +350,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(212, 108);
+            this.label12.Location = new System.Drawing.Point(212, 115);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
             this.label12.TabIndex = 74;
@@ -323,7 +358,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(338, 140);
+            this.textBox2.Location = new System.Drawing.Point(338, 147);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(52, 20);
             this.textBox2.TabIndex = 73;
@@ -355,7 +390,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(212, 143);
+            this.label7.Location = new System.Drawing.Point(212, 150);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 66;
@@ -364,7 +399,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(212, 181);
+            this.label8.Location = new System.Drawing.Point(212, 188);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 65;
@@ -373,7 +408,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(212, 72);
+            this.label9.Location = new System.Drawing.Point(212, 79);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 13);
             this.label9.TabIndex = 64;
@@ -381,16 +416,19 @@
             // 
             // comboBox7
             // 
+            this.comboBox7.DataSource = this.treatmenttypeBindingSource;
+            this.comboBox7.DisplayMember = "TREAT_DESCRIPTION";
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(338, 35);
+            this.comboBox7.Location = new System.Drawing.Point(338, 42);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(258, 21);
             this.comboBox7.TabIndex = 63;
+            this.comboBox7.ValueMember = "TREATMENT_ID";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(212, 38);
+            this.label11.Location = new System.Drawing.Point(212, 45);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 62;
@@ -466,6 +504,88 @@
             this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
             this.pictureBoxBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxBack_MouseMove);
             // 
+            // d25535935DataSet17
+            // 
+            this.d25535935DataSet17.DataSetName = "d25535935DataSet17";
+            this.d25535935DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // liststaffmembersBindingSource
+            // 
+            this.liststaffmembersBindingSource.DataMember = "list_staff_members";
+            this.liststaffmembersBindingSource.DataSource = this.d25535935DataSet17;
+            // 
+            // list_staff_membersTableAdapter
+            // 
+            this.list_staff_membersTableAdapter.ClearBeforeFill = true;
+            // 
+            // d25535935DataSet20
+            // 
+            this.d25535935DataSet20.DataSetName = "d25535935DataSet20";
+            this.d25535935DataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // petBindingSource
+            // 
+            this.petBindingSource.DataMember = "pet";
+            this.petBindingSource.DataSource = this.d25535935DataSet20;
+            // 
+            // petTableAdapter
+            // 
+            this.petTableAdapter.ClearBeforeFill = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.pictureBox6.Location = new System.Drawing.Point(9, 29);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(838, 1);
+            this.pictureBox6.TabIndex = 75;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.label25.Location = new System.Drawing.Point(6, 13);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(118, 13);
+            this.label25.TabIndex = 74;
+            this.label25.Text = "Examination Details";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.pictureBox3.Location = new System.Drawing.Point(9, 29);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(838, 1);
+            this.pictureBox3.TabIndex = 82;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.label6.Location = new System.Drawing.Point(6, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 13);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "Proposed Treatments";
+            // 
+            // d25535935DataSet21
+            // 
+            this.d25535935DataSet21.DataSetName = "d25535935DataSet21";
+            this.d25535935DataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // treatmenttypeBindingSource
+            // 
+            this.treatmenttypeBindingSource.DataMember = "treatment_type";
+            this.treatmenttypeBindingSource.DataSource = this.d25535935DataSet21;
+            // 
+            // treatment_typeTableAdapter
+            // 
+            this.treatment_typeTableAdapter.ClearBeforeFill = true;
+            // 
             // Examinations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +605,7 @@
             this.Name = "Examinations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pets4U";
+            this.Load += new System.EventHandler(this.Examinations_Load);
             this.panel_AddUser.ResumeLayout(false);
             this.panel_AddUser.PerformLayout();
             this.tabControlPage2.ResumeLayout(false);
@@ -498,6 +619,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liststaffmembersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatmenttypeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,5 +672,18 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label11;
+        private d25535935DataSet17 d25535935DataSet17;
+        private System.Windows.Forms.BindingSource liststaffmembersBindingSource;
+        private d25535935DataSet17TableAdapters.list_staff_membersTableAdapter list_staff_membersTableAdapter;
+        private d25535935DataSet20 d25535935DataSet20;
+        private System.Windows.Forms.BindingSource petBindingSource;
+        private d25535935DataSet20TableAdapters.petTableAdapter petTableAdapter;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label6;
+        private d25535935DataSet21 d25535935DataSet21;
+        private System.Windows.Forms.BindingSource treatmenttypeBindingSource;
+        private d25535935DataSet21TableAdapters.treatment_typeTableAdapter treatment_typeTableAdapter;
     }
 }
