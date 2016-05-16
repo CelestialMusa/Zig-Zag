@@ -36,5 +36,15 @@ namespace Zig_Zag
         {
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                webBrowser1.Navigate(textBox1.Text);
+            }
+        
+    }
     }
 }
