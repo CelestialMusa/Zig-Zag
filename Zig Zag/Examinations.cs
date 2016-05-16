@@ -217,6 +217,7 @@ namespace Zig_Zag
             string pet_num = (string) cmbPets.SelectedValue;
             int staff_num =  (int) cmbStaff.SelectedValue;
             string admin = cmbAdmin.SelectedText;
+            
 
             if(admin=="Yes")
             {
@@ -242,10 +243,10 @@ namespace Zig_Zag
                 command.CommandText = "insert_examination";
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.Add(new MySqlParameter("@descript", MySqlDbType.VarChar)).Value = descript;
-                command.Parameters.Add(new MySqlParameter("@pet_id", MySqlDbType.MediumText)).Value = pet_num;
-                command.Parameters.Add(new MySqlParameter("@staff_id", MySqlDbType.LongText)).Value = staff_num;
-                command.Parameters.Add(new MySqlParameter("@admission", MySqlDbType.Date)).Value = admin;
+                command.Parameters.Add(new MySqlParameter("@descript", MySqlDbType.MediumText)).Value = descript;
+                command.Parameters.Add(new MySqlParameter("@pet_id", MySqlDbType.Bit)).Value = pet_num;
+                command.Parameters.Add(new MySqlParameter("@staff_id", MySqlDbType.Int32)).Value = staff_num;
+                command.Parameters.Add(new MySqlParameter("@admission", MySqlDbType.Bit)).Value = admin;
                 command.Parameters.Add(new MySqlParameter("@pen_num", MySqlDbType.Bit)).Value = pen_num;
 
                 reader = command.ExecuteReader();
@@ -254,7 +255,7 @@ namespace Zig_Zag
             }
             catch (Exception ex)
             {
-                lblRegStatus.Text = "Pet Registration Unsuccessful: " + ex.Message;
+                lblRegStatus.Text = "Pet Registration Unsuccessful: " + ex.Source +", "+ ex.Message;
             }
             finally
             {
