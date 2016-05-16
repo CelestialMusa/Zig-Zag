@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d25535935DataSet26" targetNamespace="http://tempuri.org/d25535935DataSet26.xsd" xmlns:mstns="http://tempuri.org/d25535935DataSet26.xsd" xmlns="http://tempuri.org/d25535935DataSet26.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="d25535935ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="d25535935ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Zig_Zag.Properties.Settings.GlobalReference.Default.d25535935ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pet_owner_detailsTableAdapter" GeneratorDataComponentClassName="pet_owner_detailsTableAdapter" Name="pet_owner_details" UserDataComponentName="pet_owner_detailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="d25535935ConnectionString (Settings)" DbObjectName="d25535935.pet_owner_details" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Owner #`, `Owner Name` FROM `d25535935`.`pet_owner_details`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Owner #" DataSetColumn="Owner #" />
+              <Mapping SourceColumn="Owner Name" DataSetColumn="Owner Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d25535935DataSet26" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="d25535935DataSet26" msprop:Generator_UserDSName="d25535935DataSet26">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="pet_owner_details" msprop:Generator_TableClassName="pet_owner_detailsDataTable" msprop:Generator_TableVarName="tablepet_owner_details" msprop:Generator_TablePropName="pet_owner_details" msprop:Generator_RowDeletingName="pet_owner_detailsRowDeleting" msprop:Generator_RowChangingName="pet_owner_detailsRowChanging" msprop:Generator_RowEvHandlerName="pet_owner_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="pet_owner_detailsRowDeleted" msprop:Generator_UserTableName="pet_owner_details" msprop:Generator_RowChangedName="pet_owner_detailsRowChanged" msprop:Generator_RowEvArgName="pet_owner_detailsRowChangeEvent" msprop:Generator_RowClassName="pet_owner_detailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Owner_x0020__x0023_" msprop:Generator_ColumnVarNameInTable="_columnOwner__" msprop:Generator_ColumnPropNameInRow="_Owner__" msprop:Generator_ColumnPropNameInTable="_Owner__Column" msprop:Generator_UserColumnName="Owner #" type="xs:unsignedByte" />
+              <xs:element name="Owner_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnOwner_Name" msprop:Generator_ColumnPropNameInRow="Owner_Name" msprop:Generator_ColumnPropNameInTable="Owner_NameColumn" msprop:Generator_UserColumnName="Owner Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pet_owner_details" />
+      <xs:field xpath="mstns:Owner_x0020__x0023_" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

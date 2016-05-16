@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d25535935DataSet25" targetNamespace="http://tempuri.org/d25535935DataSet25.xsd" xmlns:mstns="http://tempuri.org/d25535935DataSet25.xsd" xmlns="http://tempuri.org/d25535935DataSet25.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="d25535935ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="d25535935ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Zig_Zag.Properties.Settings.GlobalReference.Default.d25535935ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="get_medical_staffTableAdapter" GeneratorDataComponentClassName="get_medical_staffTableAdapter" Name="get_medical_staff" UserDataComponentName="get_medical_staffTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="d25535935ConnectionString (Settings)" DbObjectName="`d25535935`.`get_medical_staff`" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>`d25535935`.`get_medical_staff`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Staff Number" DataSetColumn="Staff Number" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d25535935DataSet25" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="d25535935DataSet25" msprop:Generator_UserDSName="d25535935DataSet25">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="get_medical_staff" msprop:Generator_TableClassName="get_medical_staffDataTable" msprop:Generator_TableVarName="tableget_medical_staff" msprop:Generator_TablePropName="get_medical_staff" msprop:Generator_RowDeletingName="get_medical_staffRowDeleting" msprop:Generator_RowChangingName="get_medical_staffRowChanging" msprop:Generator_RowEvHandlerName="get_medical_staffRowChangeEventHandler" msprop:Generator_RowDeletedName="get_medical_staffRowDeleted" msprop:Generator_UserTableName="get_medical_staff" msprop:Generator_RowChangedName="get_medical_staffRowChanged" msprop:Generator_RowEvArgName="get_medical_staffRowChangeEvent" msprop:Generator_RowClassName="get_medical_staffRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Staff_x0020_Number" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnStaff_Number" msprop:Generator_ColumnPropNameInRow="Staff_Number" msprop:Generator_ColumnPropNameInTable="Staff_NumberColumn" msprop:Generator_UserColumnName="Staff Number" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:get_medical_staff" />
+      <xs:field xpath="mstns:Staff_x0020_Number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

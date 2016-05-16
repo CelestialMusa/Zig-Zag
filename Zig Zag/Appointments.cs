@@ -1,17 +1,27 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Zig_Zag
 {
     public partial class Appointments : Form
     {
+        private string connectionstring = @"Data Source=196.253.61.51; Database=d25535935; User ID= root; Password='inteltechs'";
+        private MySqlConnection connection;
+        private MySqlCommand command;
+        private MySqlDataReader reader;
+        private DataTable myDataTable;
+
         private string stateAdd = "active";
         private string stateRemove = "";
 
         public Appointments()
         {
             InitializeComponent();
+            connection = new MySqlConnection(connectionstring);
+            myDataTable = new DataTable();
         }
 
         private void pictureBoxBack_MouseMove(object sender, MouseEventArgs e)
@@ -197,16 +207,131 @@ namespace Zig_Zag
 
         private void pictureBoxGo_Click(object sender, EventArgs e)
         {
-            dtpAppoint.Format = DateTimePickerFormat.Time;
-            dtpAppoint.ShowUpDown = true;
+            cmbPet.ValueMember = "PetID";
+            cmbPet.DisplayMember = "PetName";
+            byte owner_num = (byte)cmbPetOwner.SelectedValue;
+            string date = dtpAppoint.Value.ToShortDateString();
+            string time = dtpTime.Value.Hour.ToString()+":"+ dtpTime.Value.Minute.ToString()+":"+dtpTime.Value.Second.ToString();
+            string dateTime = date+" "+time;
+            string pet_id = (string) cmbPet.SelectedValue;
+            MessageBox.Show(pet_id);
+            byte clinic = (byte) cmbClinic.SelectedValue;
 
+            insertAppoint(owner_num, dateTime, clinic, pet_id);
+        }
 
+        public void insertAppoint(byte owner_num,string dateTime, byte clinic, string pet_id)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "insert_appointment";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@clinic", MySqlDbType.Bit)).Value = clinic;
+                command.Parameters.Add(new MySqlParameter("@app_date", MySqlDbType.Timestamp)).Value = dateTime;
+                command.Parameters.Add(new MySqlParameter("@pet", MySqlDbType.Bit)).Value = pet_id;
+                command.Parameters.Add(new MySqlParameter("@owner_num", MySqlDbType.Bit)).Value = owner_num;
+
+                reader = command.ExecuteReader();
+                lblRegStatus.Visible = true;
+                lblRegStatus.Text = "Pet Successfuly Registered!";
+            }
+            catch (Exception ex)
+            {
+                lblRegStatus.Text = "Pet Registration Unsuccessful: " + ex.Message;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void Appointments_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'd25535935DataSet30.get_all_pet_owners' table. You can move, or remove it, as needed.
+            this.get_all_pet_ownersTableAdapter1.Fill(this.d25535935DataSet30.get_all_pet_owners);
+
+            // TODO: This line of code loads data into the 'd25535935DataSet1.clinic_details' table. You can move, or remove it, as needed.
+            this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet1.clinic_details);
+
             dtpTime.Format = DateTimePickerFormat.Time;
             dtpTime.ShowUpDown = true;
+
+            dtpTime.Format = DateTimePickerFormat.Custom;
+            dtpTime.CustomFormat = "HH:mm:ss";
+
+            cmbEditAppointment.Text = "";
+            cmbEditAppointment.Enabled = false;
+        }
+
+        private void radioButtonAddAppointment_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButtonAddAppointment.Checked)
+            {
+                cmbEditAppointment.Enabled = false;
+                cmbEditAppointment.Text = "";
+            }
+        }
+
+        private void radioButtonEditAppointment_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButtonEditAppointment.Checked)
+            {
+                cmbEditAppointment.Enabled = false;
+            }
+        }
+
+        private void cmbPetOwner_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                byte owner_num = (byte) (cmbPetOwner.SelectedValue);
+                loadPet(owner_num);
+            }
+            catch(Exception)
+            {
+
+            }
+
+        }
+
+        private void loadPet(byte owner_num)
+        {
+            
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "get_owner_pets";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(new MySqlParameter("@owner_num", MySqlDbType.Bit)).Value = owner_num;
+
+                reader = command.ExecuteReader();
+
+                cmbPet.Items.Clear();
+
+                while (reader.Read())
+                {
+                    cmbPet.Items.Add(new { PetID = reader["PET_ID"].ToString(), PetName = reader["PET_DESCRIPTION"].ToString() });
+                }
+
+                cmbPet.ValueMember = "PetID";
+                cmbPet.DisplayMember = "PetName";
+            }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
+            catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

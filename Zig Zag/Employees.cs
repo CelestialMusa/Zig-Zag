@@ -243,7 +243,7 @@ namespace Zig_Zag
             }
             else if (radioButtonEditEmployee.Checked)
             {
-                int staff_num = (int)comboBoxEditEmployee.SelectedValue;
+                int staff_num = (int) comboBoxEditEmployee.SelectedValue;
                 update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
             }
         }
