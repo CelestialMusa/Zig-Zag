@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
@@ -113,7 +107,6 @@ namespace Zig_Zag
             this.petTableAdapter.Fill(this.d25535935DataSet20.pet);
             // TODO: This line of code loads data into the 'd25535935DataSet17.list_staff_members' table. You can move, or remove it, as needed.
             this.list_staff_membersTableAdapter.Fill(this.d25535935DataSet17.list_staff_members);
-
         }
     }
 }

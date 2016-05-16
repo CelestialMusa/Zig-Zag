@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Zig_Zag
+﻿namespace Zig_Zag
 {
-    class ClassUsers
+    internal class ClassUsers
     {
         private string typeUser;
         private string name;

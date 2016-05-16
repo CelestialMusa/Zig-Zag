@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
@@ -87,7 +81,7 @@ namespace Zig_Zag
             labelSystem.Text = "View Pets Historic examinations";
             labelSystem.Location = new Point(45, 417);
             labelSystem.ForeColor = Color.FromArgb(255, 135, 25);
-            pictureBoxSystemLine.BackColor = Color.FromArgb(0, 85, 127);            
+            pictureBoxSystemLine.BackColor = Color.FromArgb(0, 85, 127);
             comboBoxOwnerNumOwners.Visible = true;
             radioButtonAnsOwner.Visible = true;
             radioButtonSpecOwner.Visible = true;
@@ -157,7 +151,6 @@ namespace Zig_Zag
 
         private void pictureBoxUnpaidInvoicePet_MouseLeave(object sender, EventArgs e)
         {
-
             Size size = new Size(100, 77);
             pictureBoxUnpaidInvoicePet.Size = size;
             pictureBoxUnpaidInvoicePet.Location = new Point(743, 572);
@@ -176,13 +169,12 @@ namespace Zig_Zag
             this.pet_historical_examsTableAdapter.Fill(this.d25535935DataSet6.pet_historical_exams);
             // TODO: This line of code loads data into the 'd25535935DataSet5.list_pet_details_owned_by' table. You can move, or remove it, as needed.
             this.list_pet_details_owned_byTableAdapter.Fill(this.d25535935DataSet5.list_pet_details_owned_by);
-
         }
 
         private void pictureBoxPetOwnedBy_Click(object sender, EventArgs e)
         {
-            if(radioButtonAnsOwner.Checked)
-            {                
+            if (radioButtonAnsOwner.Checked)
+            {
                 dataGridViewListPetDetailsOwnedBySpecified.Visible = false;
                 dataGridViewPetExamHistoryUnspecified.Visible = false;
                 dataGridViewPetExamHistorySpecified.Visible = false;
@@ -200,7 +192,7 @@ namespace Zig_Zag
                 dataGridViewdataGridViewTotNumPetsPerTypeUnspecified.Visible = false;
                 dataGridViewTotNumPetsPerTypeSpecified.Visible = false;
                 dataGridViewdataGridViewUnpaidInvoicePetSpecified.Visible = false;
-            }           
+            }
         }
 
         private void pictureBoxPetHistoricExam_Click(object sender, EventArgs e)
@@ -228,7 +220,7 @@ namespace Zig_Zag
         }
 
         private void pictureBoxTotNumPetsPerType_Click(object sender, EventArgs e)
-        {            
+        {
             if (radioButtonAnsOwner.Checked)
             {
                 dataGridViewListPetDetailsOwnedBySpecified.Visible = false;
@@ -238,7 +230,6 @@ namespace Zig_Zag
                 dataGridViewdataGridViewTotNumPetsPerTypeUnspecified.Visible = true;
                 dataGridViewTotNumPetsPerTypeSpecified.Visible = false;
                 dataGridViewdataGridViewUnpaidInvoicePetSpecified.Visible = false;
-
             }
             if (radioButtonSpecOwner.Checked)
             {
@@ -254,15 +245,13 @@ namespace Zig_Zag
 
         private void pictureBoxUnpaidInvoicePet_Click(object sender, EventArgs e)
         {
-           
-                dataGridViewListPetDetailsOwnedBySpecified.Visible = false;
-                dataGridViewPetExamHistoryUnspecified.Visible = false;
-                dataGridViewPetExamHistorySpecified.Visible = false;
-                dataGridViewListPetDetailsOwnedByUnspecified.Visible = false;
-                dataGridViewdataGridViewTotNumPetsPerTypeUnspecified.Visible = false;
-                dataGridViewTotNumPetsPerTypeSpecified.Visible = false;
-                dataGridViewdataGridViewUnpaidInvoicePetSpecified.Visible = true;
-            
+            dataGridViewListPetDetailsOwnedBySpecified.Visible = false;
+            dataGridViewPetExamHistoryUnspecified.Visible = false;
+            dataGridViewPetExamHistorySpecified.Visible = false;
+            dataGridViewListPetDetailsOwnedByUnspecified.Visible = false;
+            dataGridViewdataGridViewTotNumPetsPerTypeUnspecified.Visible = false;
+            dataGridViewTotNumPetsPerTypeSpecified.Visible = false;
+            dataGridViewdataGridViewUnpaidInvoicePetSpecified.Visible = true;
         }
     }
 }

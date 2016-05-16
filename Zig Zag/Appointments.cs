@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
 {
     public partial class Appointments : Form
     {
-        string stateAdd = "active";
-        string stateRemove = "";
+        private string stateAdd = "active";
+        private string stateRemove = "";
+
         public Appointments()
         {
             InitializeComponent();
@@ -198,6 +193,20 @@ namespace Zig_Zag
             ViewAppointments child = new ViewAppointments();
             ActiveForm.Hide();
             child.Show();
+        }
+
+        private void pictureBoxGo_Click(object sender, EventArgs e)
+        {
+            dtpAppoint.Format = DateTimePickerFormat.Time;
+            dtpAppoint.ShowUpDown = true;
+
+
+        }
+
+        private void Appointments_Load(object sender, EventArgs e)
+        {
+            dtpTime.Format = DateTimePickerFormat.Time;
+            dtpTime.ShowUpDown = true;
         }
     }
 }

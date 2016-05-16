@@ -1,29 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Zig_Zag
 {
     public partial class FunctionalWindow : Form
     {
-        StreamReader inputStream;
-        string[] a = new string[7];
-        List<ClassUsers> array = new List<ClassUsers>();
+        private StreamReader inputStream;
+        private string[] a = new string[7];
+        private List<ClassUsers> array = new List<ClassUsers>();
 
-        ClassUsers user;
+        private ClassUsers user;
 
         private static int position;
         private static string name;
         private static string surname;
         private static string empNum;
         private static string typeUser;
+
         public FunctionalWindow()
         {
             InitializeComponent();
@@ -99,7 +95,7 @@ namespace Zig_Zag
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you would like to log out?", "Log out", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you would like to log out?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Home child1 = new Home();
                 ActiveForm.Hide();
@@ -109,7 +105,7 @@ namespace Zig_Zag
 
         private void pictureToolsIco_MouseMove(object sender, MouseEventArgs e)
         {
-            Size size = new Size(129, 120);            
+            Size size = new Size(129, 120);
             pictureToolsIco.Size = size;
             pictureToolsIco.Location = new Point(149, 368);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Material Icons_e30c(2)_2561.png");
@@ -123,7 +119,7 @@ namespace Zig_Zag
 
         private void pictureToolsIco_MouseLeave(object sender, EventArgs e)
         {
-            Size size = new Size(119, 110);            
+            Size size = new Size(119, 110);
             pictureToolsIco.Size = size;
             pictureToolsIco.Location = new Point(164, 370);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Material Icons_e30c(2)_256.png");
@@ -165,16 +161,16 @@ namespace Zig_Zag
 
         private void pictureBoxInfoIco_MouseMove(object sender, MouseEventArgs e)
         {
-             Size size = new Size(139, 130);
-             pictureBoxInfoIco.Size = size;
-             pictureBoxInfoIco.Location = new Point(597, 366);
-             Image image = Image.FromFile("C:\\IntelTechs\\resources\\FontAwesome_f129(0)_2561.png");
-             pictureBoxInfoIco.BackgroundImage = image;
-             labelInfo.ForeColor = Color.FromArgb(255, 135, 25);
-             pictureBoxInfoLine.BackColor = Color.FromArgb(0, 85, 127);
-             labelInfo1.Visible = true;
-             labelInfo2.Visible = true;
-             labelInfo3.Visible = true;           
+            Size size = new Size(139, 130);
+            pictureBoxInfoIco.Size = size;
+            pictureBoxInfoIco.Location = new Point(597, 366);
+            Image image = Image.FromFile("C:\\IntelTechs\\resources\\FontAwesome_f129(0)_2561.png");
+            pictureBoxInfoIco.BackgroundImage = image;
+            labelInfo.ForeColor = Color.FromArgb(255, 135, 25);
+            pictureBoxInfoLine.BackColor = Color.FromArgb(0, 85, 127);
+            labelInfo1.Visible = true;
+            labelInfo2.Visible = true;
+            labelInfo3.Visible = true;
         }
 
         private void pictureBoxInfoIco_MouseLeave(object sender, EventArgs e)

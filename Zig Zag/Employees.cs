@@ -1,35 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-
 
 namespace Zig_Zag
 {
     public partial class Employees : Form
     {
-        string connectionstring = @"Data Source=196.253.61.51; Database=d25535935; User ID= root; Password='inteltechs'";
-        MySqlConnection connection;
-        MySqlCommand command;
-        MySqlDataReader reader;
-        DataTable myDataTable;
+        private string connectionstring = @"Data Source=196.253.61.51; Database=d25535935; User ID= root; Password='inteltechs'";
+        private MySqlConnection connection;
+        private MySqlCommand command;
+        private MySqlDataReader reader;
+        private DataTable myDataTable;
 
-        string stateAdd = "active";
-        string stateRemove = "";
-        
+        private string stateAdd = "active";
+        private string stateRemove = "";
+
         public Employees()
         {
             InitializeComponent();
             connection = new MySqlConnection(connectionstring);
             myDataTable = new DataTable();
             comboBoxEditEmployee.Enabled = false;
-            label29.Visible= false;
+            label29.Visible = false;
             lblR1.Visible = false;
             lblR2.Visible = false;
             lblR3.Visible = false;
@@ -90,7 +84,7 @@ namespace Zig_Zag
         {
             stateAdd = "active";
             stateRemove = "inactive";
-            
+
             panelRemoveUser.Visible = false;
             panel_AddUser.Visible = true;
             pictureBox5.Visible = true;
@@ -103,7 +97,7 @@ namespace Zig_Zag
 
                 Image image2 = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e111(1)_2561.png");
                 pictureBoxRemoveUserBTN.BackgroundImage = image2;
-                labelRemove.ForeColor = Color.FromArgb(254, 135, 25);              
+                labelRemove.ForeColor = Color.FromArgb(254, 135, 25);
             }
         }
 
@@ -134,11 +128,10 @@ namespace Zig_Zag
         {
             stateAdd = "inactive";
             stateRemove = "active";
-            
+
             panelRemoveUser.Visible = true;
             panel_AddUser.Visible = false;
             pictureBox5.Visible = false;
-
 
             if (stateRemove.Equals("active"))
             {
@@ -148,7 +141,7 @@ namespace Zig_Zag
 
                 Image image2 = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e10f(2)_2561.png");
                 pictureBoxAddUserBTN.BackgroundImage = image2;
-                labelAdd.ForeColor = Color.FromArgb(254, 135, 25);               
+                labelAdd.ForeColor = Color.FromArgb(254, 135, 25);
             }
         }
 
@@ -222,41 +215,40 @@ namespace Zig_Zag
 
         private void pictureBoxGo_Click(object sender, EventArgs e)
         {
-                string name = textBoxFirstName.Text;
-                string last = textBoxLastName.Text;
-                string gender;
-                if (comboBoxGender.SelectedText == "Male")
-                {
-                    gender = "1";
-                }
-                else
-                {
-                    gender = "0";
-                }
-                string dob = dateTimePickerDateOfBirth.Value.ToShortDateString();
-                string tel = textBoxTelephone.Text;
-                string id = textBoxIDNumber.Text;
-                int job = (int)comboBoxJobDescription.SelectedValue;
-                string salary = textBoxSalary.Text;
-                byte clinic_id = (byte)comboBoxClinicID.SelectedValue;
-                string state = textBox1State.Text;
-                string city = textBoxCity.Text;
-                string street = textBoxStreet.Text;
-                string zip = textBoxZipCode.Text;
+            string name = textBoxFirstName.Text;
+            string last = textBoxLastName.Text;
+            string gender;
+            if (comboBoxGender.SelectedText == "Male")
+            {
+                gender = "1";
+            }
+            else
+            {
+                gender = "0";
+            }
+            string dob = dateTimePickerDateOfBirth.Value.ToShortDateString();
+            string tel = textBoxTelephone.Text;
+            string id = textBoxIDNumber.Text;
+            int job = (int)comboBoxJobDescription.SelectedValue;
+            string salary = textBoxSalary.Text;
+            byte clinic_id = (byte)comboBoxClinicID.SelectedValue;
+            string state = textBox1State.Text;
+            string city = textBoxCity.Text;
+            string street = textBoxStreet.Text;
+            string zip = textBoxZipCode.Text;
 
-            if(radioButtonAddEmployee.Checked)
+            if (radioButtonAddEmployee.Checked)
             {
                 insert_staff(name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
             }
-            else if(radioButtonEditEmployee.Checked)
+            else if (radioButtonEditEmployee.Checked)
             {
-                int staff_num = (int) comboBoxEditEmployee.SelectedValue;
-                update_employee(staff_num,name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+                int staff_num = (int)comboBoxEditEmployee.SelectedValue;
+                update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
             }
-                
         }
 
-        private void update_employee(int staff_num,string name, string last, string gender, string dob, string tel,
+        private void update_employee(int staff_num, string name, string last, string gender, string dob, string tel,
                                     string id, int job, string salary, byte clinic_id, string state,
                                     string city, string street, string zip)
         {
@@ -299,9 +291,9 @@ namespace Zig_Zag
             }
         }
 
-        private void insert_staff(string name,string last,string gender,string dob,string tel,
-                                    string id,int job,string salary, byte clinic_id,string state,
-                                    string city,string street,string zip)
+        private void insert_staff(string name, string last, string gender, string dob, string tel,
+                                    string id, int job, string salary, byte clinic_id, string state,
+                                    string city, string street, string zip)
         {
             try
             {
@@ -310,7 +302,7 @@ namespace Zig_Zag
                 command.Connection = connection;
                 command.CommandText = "insert_staff";
                 command.CommandType = CommandType.StoredProcedure;
-                
+
                 command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
                 command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
                 command.Parameters.Add(new MySqlParameter("@state", MySqlDbType.VarChar)).Value = state;
@@ -385,9 +377,10 @@ namespace Zig_Zag
                     textBoxZipCode.Text = (reader["ZIPCODE"].ToString());
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
             }
             finally
             {
@@ -420,9 +413,10 @@ namespace Zig_Zag
                     comboBox1.Text = (reader["JOB_DESCRIPTION"].ToString());
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
             }
             finally
             {
@@ -435,7 +429,7 @@ namespace Zig_Zag
             try
             {
                 int staff_num = (int)comboBoxDeleteEmployee.SelectedValue;
-                
+
                 connection.Open();
                 command = new MySqlCommand();
                 command.Connection = connection;
@@ -473,7 +467,7 @@ namespace Zig_Zag
         {
             Size size = new Size(106, 75);
             pictureBox5.Size = size;
-            pictureBox5.Location = new Point(889,69);
+            pictureBox5.Location = new Point(889, 69);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\et-line_e006(0)_2561.png");
             pictureBox5.BackgroundImage = image;
             labelViewAll.Visible = true;
@@ -508,6 +502,6 @@ namespace Zig_Zag
             comboBoxEditEmployee.Enabled = false;
             comboBoxEditEmployee.Text = "";
             comboBoxClinicID.Text = "";
-        } 
+        }
     }
 }

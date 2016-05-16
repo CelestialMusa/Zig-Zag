@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
@@ -62,10 +56,10 @@ namespace Zig_Zag
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             Size size = new Size(100, 77);
-            pictureBox2.Size = size;            
+            pictureBox2.Size = size;
             pictureBox2.Location = new Point(461, 540);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e0c3(0)_2561.png");
-            pictureBox2.BackgroundImage = image;                    
+            pictureBox2.BackgroundImage = image;
             labelSystem.ForeColor = Color.FromArgb(0, 85, 127);
             pictureBoxSystemLine.BackColor = Color.FromArgb(255, 135, 25);
         }
@@ -103,7 +97,6 @@ namespace Zig_Zag
             this.list_detail_of_all_pet_owners_with_petsTableAdapter.Fill(this.d25535935DataSet12.list_detail_of_all_pet_owners_with_pets);
             // TODO: This line of code loads data into the 'd25535935DataSet11.details_of_pet_owners' table. You can move, or remove it, as needed.
             this.details_of_pet_ownersTableAdapter.Fill(this.d25535935DataSet11.details_of_pet_owners);
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

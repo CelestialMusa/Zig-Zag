@@ -34,19 +34,21 @@
             this.panel_AddUser = new System.Windows.Forms.Panel();
             this.labelViewAll = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBoxEditEmployee = new System.Windows.Forms.ComboBox();
+            this.cmbEditAppointment = new System.Windows.Forms.ComboBox();
             this.radioButtonEditAppointment = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.labelSubmit = new System.Windows.Forms.Label();
             this.pictureBoxGo = new System.Windows.Forms.PictureBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbPetOwner = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxJobDescription = new System.Windows.Forms.ComboBox();
-            this.comboBoxGender = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.cmbPet = new System.Windows.Forms.ComboBox();
+            this.cmbClinic = new System.Windows.Forms.ComboBox();
+            this.dtpAppoint = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButtonAddAppointment = new System.Windows.Forms.RadioButton();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
@@ -65,12 +67,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUserProfile = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label25 = new System.Windows.Forms.Label();
+            this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.panel_AddUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
             this.panelRemoveUser.SuspendLayout();
@@ -82,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // labelBack
@@ -114,7 +115,7 @@
             this.panel_AddUser.BackColor = System.Drawing.Color.Transparent;
             this.panel_AddUser.Controls.Add(this.labelViewAll);
             this.panel_AddUser.Controls.Add(this.pictureBox1);
-            this.panel_AddUser.Controls.Add(this.comboBoxEditEmployee);
+            this.panel_AddUser.Controls.Add(this.cmbEditAppointment);
             this.panel_AddUser.Controls.Add(this.radioButtonEditAppointment);
             this.panel_AddUser.Controls.Add(this.tabControl1);
             this.panel_AddUser.Controls.Add(this.radioButtonAddAppointment);
@@ -144,13 +145,13 @@
             this.pictureBox1.TabIndex = 74;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBoxEditEmployee
+            // cmbEditAppointment
             // 
-            this.comboBoxEditEmployee.FormattingEnabled = true;
-            this.comboBoxEditEmployee.Location = new System.Drawing.Point(443, 21);
-            this.comboBoxEditEmployee.Name = "comboBoxEditEmployee";
-            this.comboBoxEditEmployee.Size = new System.Drawing.Size(169, 21);
-            this.comboBoxEditEmployee.TabIndex = 3;
+            this.cmbEditAppointment.FormattingEnabled = true;
+            this.cmbEditAppointment.Location = new System.Drawing.Point(443, 21);
+            this.cmbEditAppointment.Name = "cmbEditAppointment";
+            this.cmbEditAppointment.Size = new System.Drawing.Size(169, 21);
+            this.cmbEditAppointment.TabIndex = 3;
             // 
             // radioButtonEditAppointment
             // 
@@ -173,17 +174,18 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dtpTime);
             this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.labelSubmit);
             this.tabPage1.Controls.Add(this.pictureBoxGo);
-            this.tabPage1.Controls.Add(this.comboBox3);
+            this.tabPage1.Controls.Add(this.cmbPetOwner);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.comboBoxJobDescription);
-            this.tabPage1.Controls.Add(this.comboBoxGender);
-            this.tabPage1.Controls.Add(this.dateTimePickerDateOfBirth);
+            this.tabPage1.Controls.Add(this.cmbPet);
+            this.tabPage1.Controls.Add(this.cmbClinic);
+            this.tabPage1.Controls.Add(this.dtpAppoint);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -192,6 +194,26 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Page 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.pictureBox6.Location = new System.Drawing.Point(9, 39);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(838, 1);
+            this.pictureBox6.TabIndex = 75;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.label25.Location = new System.Drawing.Point(6, 23);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(120, 13);
+            this.label25.TabIndex = 74;
+            this.label25.Text = "Appointment Details";
             // 
             // labelSubmit
             // 
@@ -214,16 +236,17 @@
             this.pictureBoxGo.Size = new System.Drawing.Size(96, 65);
             this.pictureBoxGo.TabIndex = 56;
             this.pictureBoxGo.TabStop = false;
+            this.pictureBoxGo.Click += new System.EventHandler(this.pictureBoxGo_Click);
             this.pictureBoxGo.MouseLeave += new System.EventHandler(this.pictureBoxGo_MouseLeave);
             this.pictureBoxGo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxGo_MouseMove);
             // 
-            // comboBox3
+            // cmbPetOwner
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(362, 123);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(204, 21);
-            this.comboBox3.TabIndex = 43;
+            this.cmbPetOwner.FormattingEnabled = true;
+            this.cmbPetOwner.Location = new System.Drawing.Point(362, 123);
+            this.cmbPetOwner.Name = "cmbPetOwner";
+            this.cmbPetOwner.Size = new System.Drawing.Size(204, 21);
+            this.cmbPetOwner.TabIndex = 43;
             // 
             // label5
             // 
@@ -252,28 +275,28 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "Appointment date";
             // 
-            // comboBoxJobDescription
+            // cmbPet
             // 
-            this.comboBoxJobDescription.FormattingEnabled = true;
-            this.comboBoxJobDescription.Location = new System.Drawing.Point(362, 228);
-            this.comboBoxJobDescription.Name = "comboBoxJobDescription";
-            this.comboBoxJobDescription.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxJobDescription.TabIndex = 28;
+            this.cmbPet.FormattingEnabled = true;
+            this.cmbPet.Location = new System.Drawing.Point(362, 228);
+            this.cmbPet.Name = "cmbPet";
+            this.cmbPet.Size = new System.Drawing.Size(202, 21);
+            this.cmbPet.TabIndex = 28;
             // 
-            // comboBoxGender
+            // cmbClinic
             // 
-            this.comboBoxGender.FormattingEnabled = true;
-            this.comboBoxGender.Location = new System.Drawing.Point(362, 193);
-            this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxGender.TabIndex = 27;
+            this.cmbClinic.FormattingEnabled = true;
+            this.cmbClinic.Location = new System.Drawing.Point(362, 193);
+            this.cmbClinic.Name = "cmbClinic";
+            this.cmbClinic.Size = new System.Drawing.Size(121, 21);
+            this.cmbClinic.TabIndex = 27;
             // 
-            // dateTimePickerDateOfBirth
+            // dtpAppoint
             // 
-            this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(362, 154);
-            this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
-            this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(202, 20);
-            this.dateTimePickerDateOfBirth.TabIndex = 26;
+            this.dtpAppoint.Location = new System.Drawing.Point(362, 154);
+            this.dtpAppoint.Name = "dtpAppoint";
+            this.dtpAppoint.Size = new System.Drawing.Size(202, 20);
+            this.dtpAppoint.TabIndex = 26;
             // 
             // label1
             // 
@@ -477,25 +500,12 @@
             this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
             this.pictureBoxBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxBack_MouseMove);
             // 
-            // pictureBox6
+            // dtpTime
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.pictureBox6.Location = new System.Drawing.Point(9, 39);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(838, 1);
-            this.pictureBox6.TabIndex = 75;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.label25.Location = new System.Drawing.Point(6, 23);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(120, 13);
-            this.label25.TabIndex = 74;
-            this.label25.Text = "Appointment Details";
+            this.dtpTime.Location = new System.Drawing.Point(570, 154);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.Size = new System.Drawing.Size(106, 20);
+            this.dtpTime.TabIndex = 76;
             // 
             // Appointments
             // 
@@ -522,12 +532,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pets4U";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Appointments_FormClosed);
+            this.Load += new System.EventHandler(this.Appointments_Load);
             this.panel_AddUser.ResumeLayout(false);
             this.panel_AddUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
             this.panelRemoveUser.ResumeLayout(false);
@@ -540,7 +552,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,16 +568,16 @@
         private System.Windows.Forms.Panel panel_AddUser;
         private System.Windows.Forms.Label labelViewAll;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBoxEditEmployee;
+        private System.Windows.Forms.ComboBox cmbEditAppointment;
         private System.Windows.Forms.RadioButton radioButtonEditAppointment;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxJobDescription;
-        private System.Windows.Forms.ComboBox comboBoxGender;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
+        private System.Windows.Forms.ComboBox cmbPet;
+        private System.Windows.Forms.ComboBox cmbClinic;
+        private System.Windows.Forms.DateTimePicker dtpAppoint;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButtonAddAppointment;
         private System.Windows.Forms.PictureBox pictureBoxLine;
@@ -579,12 +590,13 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox comboBoxDeleteEmployee;
         private System.Windows.Forms.PictureBox pictureBoxRemoveUserGo;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbPetOwner;
         private System.Windows.Forms.Label labelSubmit;
         private System.Windows.Forms.PictureBox pictureBoxGo;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DateTimePicker dtpTime;
     }
 }

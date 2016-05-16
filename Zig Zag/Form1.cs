@@ -1,24 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Zig_Zag
 {
     public partial class Home : Form
     {
-        StreamReader inputStream;
-        string[] a = new string[7];
-        List<ClassUsers> array = new List<ClassUsers>();
-        int count = 0;
+        private StreamReader inputStream;
+        private string[] a = new string[7];
+        private List<ClassUsers> array = new List<ClassUsers>();
+        private int count = 0;
 
-        ClassUsers user;
+        private ClassUsers user;
 
         public Home()
         {
@@ -41,12 +36,10 @@ namespace Zig_Zag
 
         private void panelLogin_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void pictureBoxLoginButton_Click(object sender, EventArgs e)
         {
-
             try
             {
                 string user = comboBoxUser.SelectedItem.ToString();
@@ -66,7 +59,7 @@ namespace Zig_Zag
                         }
                         else
                         {
-                            if(MessageBox.Show("Invalid Password, would you like to retrieve your password?","Error",MessageBoxButtons.YesNo,MessageBoxIcon.Error) == DialogResult.Yes)
+                            if (MessageBox.Show("Invalid Password, would you like to retrieve your password?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
                             {
                                 ForgotPass child = new ForgotPass();
                                 ActiveForm.Hide();
@@ -127,7 +120,6 @@ namespace Zig_Zag
 
         private void textBoxPass_TextChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void comboBoxUser_Click(object sender, EventArgs e)

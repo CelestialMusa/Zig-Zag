@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
@@ -19,17 +13,16 @@ namespace Zig_Zag
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void pictureBoxVieInvoicesBy_MouseMove(object sender, MouseEventArgs e)
         {
             Size size = new Size(110, 87);
-            pictureBoxVieInvoicesBy.Size = size;           
+            pictureBoxVieInvoicesBy.Size = size;
             pictureBoxVieInvoicesBy.Location = new Point(464, 561);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e07c(1)_256.png");
             pictureBoxVieInvoicesBy.BackgroundImage = image;
-            labelSystem.Text = "View invoice by pet owner/date";            
+            labelSystem.Text = "View invoice by pet owner/date";
             labelSystem.ForeColor = Color.FromArgb(255, 135, 25);
             labelSystem.Location = new Point(393, 502);
             pictureBox1.BackColor = Color.FromArgb(0, 85, 127);
@@ -41,7 +34,7 @@ namespace Zig_Zag
             pictureBoxVieInvoicesBy.Size = size;
             pictureBoxVieInvoicesBy.Location = new Point(474, 563);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e07c(1)_2561.png");
-            pictureBoxVieInvoicesBy.BackgroundImage = image;           
+            pictureBoxVieInvoicesBy.BackgroundImage = image;
             labelSystem.ForeColor = Color.FromArgb(0, 85, 127);
             pictureBox1.BackColor = Color.FromArgb(255, 135, 25);
         }
@@ -92,7 +85,7 @@ namespace Zig_Zag
             pictureBoxViewInvoices.Location = new Point(620, 563);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\octicons_f011(0)_2561.png");
             pictureBoxViewInvoices.BackgroundImage = image;
-            labelSystem.ForeColor = Color.FromArgb(0, 85, 127);            
+            labelSystem.ForeColor = Color.FromArgb(0, 85, 127);
             pictureBox1.BackColor = Color.FromArgb(255, 135, 25);
         }
 

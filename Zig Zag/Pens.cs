@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
@@ -92,7 +86,6 @@ namespace Zig_Zag
             this.total_num_of_pens_in_each_clinicTableAdapter.Fill(this.d25535935DataSet14.total_num_of_pens_in_each_clinic);
             // TODO: This line of code loads data into the 'd25535935DataSet13.list_available_pens_in_each_clinic' table. You can move, or remove it, as needed.
             this.list_available_pens_in_each_clinicTableAdapter.Fill(this.d25535935DataSet13.list_available_pens_in_each_clinic);
-
         }
 
         private void pictureBoxVieInvoicesBy_Click(object sender, EventArgs e)

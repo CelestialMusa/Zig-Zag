@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
 {
     public partial class Users : Form
     {
-        string stateAdd = "";
-        string stateRemove = "";
-        string stateEddit = "";
+        private string stateAdd = "";
+        private string stateRemove = "";
+        private string stateEddit = "";
 
         public Users()
         {
@@ -60,11 +54,10 @@ namespace Zig_Zag
         }
 
         private void pictureBoxAddUserBTN_MouseMove(object sender, MouseEventArgs e)
-        {          
-             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e10f(2)_256.png");
-             pictureBoxAddUserBTN.BackgroundImage = image;
-             labelAdd.ForeColor = Color.FromArgb(0, 85, 127);
-            
+        {
+            Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e10f(2)_256.png");
+            pictureBoxAddUserBTN.BackgroundImage = image;
+            labelAdd.ForeColor = Color.FromArgb(0, 85, 127);
         }
 
         private void pictureBoxAddUserBTN_MouseLeave(object sender, EventArgs e)
@@ -80,19 +73,19 @@ namespace Zig_Zag
                 Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e10f(2)_2561.png");
                 pictureBoxAddUserBTN.BackgroundImage = image;
                 labelAdd.ForeColor = Color.FromArgb(254, 135, 25);
-            }            
+            }
         }
 
         private void pictureBoxRemoveUserBTN_MouseMove(object sender, MouseEventArgs e)
         {
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e111(1)_256.png");
             pictureBoxRemoveUserBTN.BackgroundImage = image;
-            labelRemove.ForeColor = Color.FromArgb(0, 85, 127);            
+            labelRemove.ForeColor = Color.FromArgb(0, 85, 127);
         }
 
         private void pictureBoxRemoveUserBTN_MouseLeave(object sender, EventArgs e)
         {
-            if(stateRemove == "active")
+            if (stateRemove == "active")
             {
                 Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e111(1)_256.png");
                 pictureBoxRemoveUserBTN.BackgroundImage = image;
@@ -103,19 +96,19 @@ namespace Zig_Zag
                 Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e111(1)_2561.png");
                 pictureBoxRemoveUserBTN.BackgroundImage = image;
                 labelRemove.ForeColor = Color.FromArgb(254, 135, 25);
-            }            
+            }
         }
 
         private void pictureBoxEditUserBTN_MouseMove(object sender, MouseEventArgs e)
         {
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e113(0)_256.png");
             pictureBoxEditUserBTN.BackgroundImage = image;
-            labelEdit.ForeColor = Color.FromArgb(0, 85, 127);            
+            labelEdit.ForeColor = Color.FromArgb(0, 85, 127);
         }
 
         private void pictureBoxEditUserBTN_MouseLeave(object sender, EventArgs e)
         {
-            if(stateEddit == "active")
+            if (stateEddit == "active")
             {
                 Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e113(0)_256.png");
                 pictureBoxEditUserBTN.BackgroundImage = image;
@@ -126,7 +119,7 @@ namespace Zig_Zag
                 Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e113(0)_2561.png");
                 pictureBoxEditUserBTN.BackgroundImage = image;
                 labelEdit.ForeColor = Color.FromArgb(254, 135, 25);
-            }            
+            }
         }
 
         private void pictureBoxAddUserBTN_Click(object sender, EventArgs e)
@@ -138,7 +131,7 @@ namespace Zig_Zag
             panel_AddUser.Visible = true;
             panelEdditUser.Visible = false;
 
-            if(stateAdd.Equals("active"))
+            if (stateAdd.Equals("active"))
             {
                 Image image = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e10f(2)_256.png");
                 pictureBoxAddUserBTN.BackgroundImage = image;
@@ -151,7 +144,7 @@ namespace Zig_Zag
                 Image image3 = Image.FromFile("C:\\IntelTechs\\resources\\Typicons_e113(0)_2561.png");
                 pictureBoxEditUserBTN.BackgroundImage = image3;
                 labelEdit.ForeColor = Color.FromArgb(254, 135, 25);
-            }            
+            }
         }
 
         private void pictureBoxRemoveUserBTN_Click(object sender, EventArgs e)
@@ -162,7 +155,6 @@ namespace Zig_Zag
             panelRemoveUser.Visible = true;
             panel_AddUser.Visible = false;
             panelEdditUser.Visible = false;
-
 
             if (stateRemove.Equals("active"))
             {
@@ -188,7 +180,6 @@ namespace Zig_Zag
             panelRemoveUser.Visible = false;
             panel_AddUser.Visible = false;
             panelEdditUser.Visible = true;
-
 
             if (stateEddit.Equals("active"))
             {
@@ -232,7 +223,6 @@ namespace Zig_Zag
 
         private void Users_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

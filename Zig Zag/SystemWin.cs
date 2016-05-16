@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
@@ -35,7 +29,7 @@ namespace Zig_Zag
         {
             FunctionalWindow child = new FunctionalWindow();
             ActiveForm.Hide();
-            child.Show(); 
+            child.Show();
         }
 
         private void SystemWin_FormClosed(object sender, FormClosedEventArgs e)
@@ -57,7 +51,7 @@ namespace Zig_Zag
             pictureBox1.Location = new Point(280, 342);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\icomoon_e657(2)_256.png");
             pictureBox1.BackgroundImage = image;
-            labelEmployees.ForeColor = Color.FromArgb(255, 135, 25);            
+            labelEmployees.ForeColor = Color.FromArgb(255, 135, 25);
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)

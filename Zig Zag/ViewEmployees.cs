@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zig_Zag
 {
     public partial class ViewEmployees : Form
     {
-        string stateMonthSal = "active";
-        string stateOver50 = "";
+#pragma warning disable CS0414 // The field 'ViewEmployees.stateMonthSal' is assigned but its value is never used
+        private string stateMonthSal = "active";
+#pragma warning restore CS0414 // The field 'ViewEmployees.stateMonthSal' is assigned but its value is never used
+        private string stateOver50 = "";
+
         public ViewEmployees()
         {
             InitializeComponent();
@@ -63,7 +60,6 @@ namespace Zig_Zag
             this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet1.clinic_details);
             // TODO: This line of code loads data into the 'd25535935DataSet.list_names_and_snumbers_over_50_years' table. You can move, or remove it, as needed.
             //this.list_names_and_snumbers_over_50_yearsTableAdapter.Fill(this.d25535935DataSet.list_names_and_snumbers_over_50_years);
-
         }
 
         private void pictureBoxStaff_History_MouseMove(object sender, MouseEventArgs e)
@@ -79,12 +75,11 @@ namespace Zig_Zag
             labelSystem.Text = "Total monthly salary for staff";
             labelSystem.Location = new Point(191, 417);
             labelSystem.ForeColor = Color.FromArgb(255, 135, 25);
-            pictureBoxSystemLine.BackColor = Color.FromArgb(0, 85, 127);           
+            pictureBoxSystemLine.BackColor = Color.FromArgb(0, 85, 127);
         }
 
         private void labelSystem_MouseMove(object sender, MouseEventArgs e)
         {
-
         }
 
         private void pictureBoxStaff_History_MouseLeave(object sender, EventArgs e)
@@ -101,13 +96,12 @@ namespace Zig_Zag
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
         {
             Size size = new Size(110, 87);
-            Size size2 = new Size(720, 1);            
+            Size size2 = new Size(720, 1);
             pictureBoxOver50.Size = size;
             pictureBox1.Size = size2;
             pictureBoxOver50.Location = new Point(610, 551);
@@ -116,17 +110,17 @@ namespace Zig_Zag
             pictureBoxOver50.BackgroundImage = image;
             labelSystem.Text = "Names and staff numbers for staff over 50 years";
             labelSystem.Location = new Point(90, 417);
-            labelSystem.ForeColor = Color.FromArgb(255, 135, 25);            
-            pictureBoxSystemLine.BackColor = Color.FromArgb(0, 85, 127);             
+            labelSystem.ForeColor = Color.FromArgb(255, 135, 25);
+            pictureBoxSystemLine.BackColor = Color.FromArgb(0, 85, 127);
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             Size size = new Size(100, 77);
-            pictureBoxOver50.Size = size;            
-            pictureBoxOver50.Location = new Point(618, 553);            
+            pictureBoxOver50.Size = size;
+            pictureBoxOver50.Location = new Point(618, 553);
             Image image = Image.FromFile("C:\\IntelTechs\\resources\\themify_e699(0)_256.png");
-            pictureBoxOver50.BackgroundImage = image;           
+            pictureBoxOver50.BackgroundImage = image;
             //labelSystem.Location = new Point(191, 417);
             labelSystem.ForeColor = Color.FromArgb(0, 85, 127);
             pictureBoxSystemLine.BackColor = Color.FromArgb(255, 135, 25);
@@ -135,7 +129,6 @@ namespace Zig_Zag
 
         private void pictureBoxStaff_History_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBoxOver50_Click(object sender, EventArgs e)
@@ -151,28 +144,25 @@ namespace Zig_Zag
                 Image image = Image.FromFile("C:\\IntelTechs\\resources\\themify_e699(0)_256.png");
                 pictureBoxOver50.BackgroundImage = image;
                 labelSystem.ForeColor = Color.FromArgb(0, 85, 127);
-                labelSystem.Location = new Point(90, 417);                
+                labelSystem.Location = new Point(90, 417);
                 labelSystem.Text = "Names and staff numbers for staff over 50 years";
                 labelSystem.Visible = true;
 
                 Image image2 = Image.FromFile("C:\\IntelTechs\\resources\\FontAwesome_f0d6(0)_2561.png");
-                pictureBoxStaff_History.BackgroundImage = image2;                
+                pictureBoxStaff_History.BackgroundImage = image2;
             }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void labelBack_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBoxUserProfile_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

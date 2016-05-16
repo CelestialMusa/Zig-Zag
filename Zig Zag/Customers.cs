@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Zig_Zag
 {
     public partial class Customers : Form
     {
-        string connectionstring = @"Data Source=196.253.61.51; Database=d25535935; User ID= root; Password='inteltechs'";
-        MySqlConnection connection;
-        MySqlCommand command;
-        MySqlDataReader reader;
-        DataTable myDataTable;
+        private string connectionstring = @"Data Source=196.253.61.51; Database=d25535935; User ID= root; Password='inteltechs'";
+        private MySqlConnection connection;
+        private MySqlCommand command;
+        private MySqlDataReader reader;
+        private DataTable myDataTable;
 
         public Customers()
         {
@@ -76,7 +71,6 @@ namespace Zig_Zag
 
         private void Customers_ForeColorChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Customers_FormClosed(object sender, FormClosedEventArgs e)
@@ -132,7 +126,7 @@ namespace Zig_Zag
 
         private void radioButtonAddEmployee_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButtonAddPetOwner.Checked)
+            if (radioButtonAddPetOwner.Checked)
             {
                 comboBoxEditPetOwner.Enabled = false;
                 txtFirst.Text = "";
@@ -165,7 +159,7 @@ namespace Zig_Zag
         {
             try
             {
-                byte owner_num = (byte) comboBoxEditPetOwner.SelectedValue;
+                byte owner_num = (byte)comboBoxEditPetOwner.SelectedValue;
                 connection.Open();
                 command = new MySqlCommand();
                 command.Connection = connection;
@@ -204,7 +198,7 @@ namespace Zig_Zag
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                lblRegStatus.Text= ex.Message;
             }
             finally
             {
@@ -224,16 +218,16 @@ namespace Zig_Zag
             string tel = txtTel.Text;
             string id_no = txtID.Text;
             string gender = cmbGender.Text;
-            if(gender=="Male")
+            if (gender == "Male")
             {
                 gender = "1";
             }
-            else if(gender == "Female")
+            else if (gender == "Female")
             {
                 gender = "0";
             }
             string dob = dtPicker.Value.ToShortDateString();
-            byte clinic_id = (byte) cmbClinic.SelectedValue;
+            byte clinic_id = (byte)cmbClinic.SelectedValue;
             string pname = txtPetname.Text;
             string pdescript = txtPetDescript.Text;
             string petType = cmbPetType.Text;
@@ -243,14 +237,14 @@ namespace Zig_Zag
             string state = txtState.Text;
             string zip = txtZip.Text;
 
-            if(radioButtonAddPetOwner.Checked)
+            if (radioButtonAddPetOwner.Checked)
             {
-                insertOwner(fname, lname,tel,id_no,gender,dob,clinic_id,pname,petType, pdescript, petDOB,street,city,state,zip);
+                insertOwner(fname, lname, tel, id_no, gender, dob, clinic_id, pname, petType, pdescript, petDOB, street, city, state, zip);
             }
-            else if(radioButtonEditPetOwner.Checked)
+            else if (radioButtonEditPetOwner.Checked)
             {
                 byte owner_num = (byte)comboBoxEditPetOwner.SelectedValue;
-                updatePetOwner(owner_num,fname, lname, tel, id_no, gender, dob, clinic_id, pname, petType, pdescript, petDOB, street, city, state, zip);
+                updatePetOwner(owner_num, fname, lname, tel, id_no, gender, dob, clinic_id, pname, petType, pdescript, petDOB, street, city, state, zip);
             }
         }
 
@@ -264,7 +258,6 @@ namespace Zig_Zag
                 command.Connection = connection;
                 command.CommandText = "insert_pet_owner";
                 command.CommandType = CommandType.StoredProcedure;
-
 
                 command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
                 command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
@@ -281,7 +274,6 @@ namespace Zig_Zag
                 command.Parameters.Add(new MySqlParameter("@pet_type", MySqlDbType.MediumText)).Value = petType;
                 command.Parameters.Add(new MySqlParameter("@pet_descript", MySqlDbType.LongText)).Value = pdescript;
                 command.Parameters.Add(new MySqlParameter("@pet_dob", MySqlDbType.Date)).Value = petDOB;
-
 
                 reader = command.ExecuteReader();
                 myDataTable.Load(reader);

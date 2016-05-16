@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Zig_Zag
-{    
+{
     public partial class ForgotPass : Form
     {
-        string selectedUser;
-        string password;
-        string answer;
-        StreamReader inputStream;
-        string[] a = new string[7];
-        List<ClassUsers> array = new List<ClassUsers>();
+        private string selectedUser;
+        private string password;
+        private string answer;
+        private StreamReader inputStream;
+        private string[] a = new string[7];
+        private List<ClassUsers> array = new List<ClassUsers>();
         public int count = 0;
 
-        ClassUsers user;
+        private ClassUsers user;
+
         public ForgotPass()
         {
             InitializeComponent();
@@ -39,24 +35,24 @@ namespace Zig_Zag
 
                     if (answer.Equals(textBox_ForgotPass_Password.Text))
                     {
-                        MessageBox.Show("Your password is: " + password,"Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Your password is: " + password, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         textBox_ForgotPass_Password.Clear();
                     }
                     else
                     {
-                        MessageBox.Show("Your answer is incorrect. Please try again.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("Your answer is incorrect. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox_ForgotPass_Password.Clear();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter an answer.","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Please enter an answer.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
-                MessageBox.Show("Please select a user.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }            
+                MessageBox.Show("Please select a user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ForgotPass_FormClosed(object sender, FormClosedEventArgs e)
@@ -87,12 +83,12 @@ namespace Zig_Zag
 
         private void textBox_ForgotPass_Password_Click(object sender, EventArgs e)
         {
-            if(count < 1)
+            if (count < 1)
             {
                 textBox_ForgotPass_Password.Text = "";
                 textBox_ForgotPass_Password.ForeColor = Color.Black;
             }
-            count++;     
+            count++;
         }
 
         private void pictureBoxLoginButton_MouseMove(object sender, MouseEventArgs e)
