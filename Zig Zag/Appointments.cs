@@ -14,6 +14,9 @@ namespace Zig_Zag
         private MySqlDataReader reader;
         private DataTable myDataTable;
 
+        int count = 0;
+        string[] arr;
+
         private string stateAdd = "active";
         private string stateRemove = "";
 
@@ -207,20 +210,19 @@ namespace Zig_Zag
 
         private void pictureBoxGo_Click(object sender, EventArgs e)
         {
-            cmbPet.ValueMember = "PetID";
-            cmbPet.DisplayMember = "PetName";
             byte owner_num = (byte)cmbPetOwner.SelectedValue;
             string date = dtpAppoint.Value.ToShortDateString();
             string time = dtpTime.Value.Hour.ToString()+":"+ dtpTime.Value.Minute.ToString()+":"+dtpTime.Value.Second.ToString();
             string dateTime = date+" "+time;
-            string pet_id = (string) cmbPet.SelectedValue;
-            MessageBox.Show(pet_id);
+            int index = (int) cmbPet.SelectedIndex;
+            int pet_id = Convert.ToInt32(index);
+            MessageBox.Show(pet_id.ToString());
             byte clinic = (byte) cmbClinic.SelectedValue;
 
             insertAppoint(owner_num, dateTime, clinic, pet_id);
         }
 
-        public void insertAppoint(byte owner_num,string dateTime, byte clinic, string pet_id)
+        public void insertAppoint(byte owner_num,string dateTime, byte clinic, int pet_id)
         {
             try
             {
@@ -295,12 +297,10 @@ namespace Zig_Zag
             {
 
             }
-
         }
 
         private void loadPet(byte owner_num)
-        {
-            
+        {    
             try
             {
                 connection.Open();
@@ -317,6 +317,8 @@ namespace Zig_Zag
                 while (reader.Read())
                 {
                     cmbPet.Items.Add(new { PetID = reader["PET_ID"].ToString(), PetName = reader["PET_DESCRIPTION"].ToString() });
+                    arr[count++] = (reader["PET_ID"].ToString());
+                    MessageBox.Show(arr[count]);
                 }
 
                 cmbPet.ValueMember = "PetID";
