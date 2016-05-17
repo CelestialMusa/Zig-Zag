@@ -17,6 +17,8 @@ namespace Zig_Zag
         int count = 0;
         string[] arr;
 
+        string pet_num;
+
         private string stateAdd = "active";
         private string stateRemove = "";
 
@@ -214,15 +216,12 @@ namespace Zig_Zag
             string date = dtpAppoint.Value.ToShortDateString();
             string time = dtpTime.Value.Hour.ToString()+":"+ dtpTime.Value.Minute.ToString()+":"+dtpTime.Value.Second.ToString();
             string dateTime = date+" "+time;
-            int index = (int) cmbPet.SelectedIndex;
-            int pet_id = Convert.ToInt32(index);
-            MessageBox.Show(pet_id.ToString());
             byte clinic = (byte) cmbClinic.SelectedValue;
 
-            insertAppoint(owner_num, dateTime, clinic, pet_id);
+            insertAppoint(owner_num, dateTime, clinic, pet_num);
         }
 
-        public void insertAppoint(byte owner_num,string dateTime, byte clinic, int pet_id)
+        public void insertAppoint(byte owner_num,string dateTime, byte clinic, string pet_id)
         {
             try
             {
@@ -317,8 +316,7 @@ namespace Zig_Zag
                 while (reader.Read())
                 {
                     cmbPet.Items.Add(new { PetID = reader["PET_ID"].ToString(), PetName = reader["PET_DESCRIPTION"].ToString() });
-                    arr[count++] = (reader["PET_ID"].ToString());
-                    MessageBox.Show(arr[count]);
+                    pet_num = reader["PET_ID"].ToString();
                 }
 
                 cmbPet.ValueMember = "PetID";
@@ -328,12 +326,12 @@ namespace Zig_Zag
             catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+" "+ex.Source);
             }
             finally
             {
                 connection.Close();
             }
-        }
+    }
     }
 }

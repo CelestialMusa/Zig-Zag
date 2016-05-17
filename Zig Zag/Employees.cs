@@ -217,7 +217,8 @@ namespace Zig_Zag
         {
             string name = textBoxFirstName.Text;
             string last = textBoxLastName.Text;
-            string gender;
+            string gender = comboBoxGender.Text;
+            gender.Trim();
             if (comboBoxGender.SelectedText == "Male")
             {
                 gender = "1";

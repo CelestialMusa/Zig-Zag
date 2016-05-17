@@ -39,17 +39,22 @@
             this.radioButtonEditAppointment = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblRegStatus = new System.Windows.Forms.Label();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.labelSubmit = new System.Windows.Forms.Label();
             this.pictureBoxGo = new System.Windows.Forms.PictureBox();
             this.cmbPetOwner = new System.Windows.Forms.ComboBox();
+            this.getallpetownersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.d25535935DataSet30 = new Zig_Zag.d25535935DataSet30();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbPet = new System.Windows.Forms.ComboBox();
             this.cmbClinic = new System.Windows.Forms.ComboBox();
+            this.clinicdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.d25535935DataSet1 = new Zig_Zag.d25535935DataSet1();
             this.dtpAppoint = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButtonAddAppointment = new System.Windows.Forms.RadioButton();
@@ -72,8 +77,6 @@
             this.d25535935DataSet26 = new Zig_Zag.d25535935DataSet26();
             this.petownerdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pet_owner_detailsTableAdapter = new Zig_Zag.d25535935DataSet26TableAdapters.pet_owner_detailsTableAdapter();
-            this.d25535935DataSet1 = new Zig_Zag.d25535935DataSet1();
-            this.clinicdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clinic_detailsTableAdapter = new Zig_Zag.d25535935DataSet1TableAdapters.clinic_detailsTableAdapter();
             this.d25535935DataSet27 = new Zig_Zag.d25535935DataSet27();
             this.detailsofpetownersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -83,19 +86,23 @@
             this.d25535935DataSet28 = new Zig_Zag.d25535935DataSet28();
             this.detailsofpetownersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.details_of_pet_ownersTableAdapter1 = new Zig_Zag.d25535935DataSet28TableAdapters.details_of_pet_ownersTableAdapter();
-            this.lblRegStatus = new System.Windows.Forms.Label();
             this.d25535935DataSet29 = new Zig_Zag.d25535935DataSet29();
             this.getallpetownersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.get_all_pet_ownersTableAdapter = new Zig_Zag.d25535935DataSet29TableAdapters.get_all_pet_ownersTableAdapter();
-            this.d25535935DataSet30 = new Zig_Zag.d25535935DataSet30();
-            this.getallpetownersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.get_all_pet_ownersTableAdapter1 = new Zig_Zag.d25535935DataSet30TableAdapters.get_all_pet_ownersTableAdapter();
+            this.d25535935DataSet32 = new Zig_Zag.d25535935DataSet32();
+            this.getownerpetsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.get_owner_petsTableAdapter = new Zig_Zag.d25535935DataSet32TableAdapters.get_owner_petsTableAdapter();
             this.panel_AddUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
             this.panelRemoveUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,8 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petownerdetailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsofpetownersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet8)).BeginInit();
@@ -118,8 +123,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.detailsofpetownersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getownerpetsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelBack
@@ -233,6 +238,16 @@
             this.tabPage1.Text = "Page 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lblRegStatus
+            // 
+            this.lblRegStatus.AutoSize = true;
+            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.lblRegStatus.Location = new System.Drawing.Point(259, 319);
+            this.lblRegStatus.Name = "lblRegStatus";
+            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblRegStatus.TabIndex = 78;
+            // 
             // dtpTime
             // 
             this.dtpTime.Location = new System.Drawing.Point(570, 154);
@@ -297,6 +312,16 @@
             this.cmbPetOwner.ValueMember = "OWNER_NUM";
             this.cmbPetOwner.SelectedIndexChanged += new System.EventHandler(this.cmbPetOwner_SelectedIndexChanged);
             // 
+            // getallpetownersBindingSource1
+            // 
+            this.getallpetownersBindingSource1.DataMember = "get_all_pet_owners";
+            this.getallpetownersBindingSource1.DataSource = this.d25535935DataSet30;
+            // 
+            // d25535935DataSet30
+            // 
+            this.d25535935DataSet30.DataSetName = "d25535935DataSet30";
+            this.d25535935DataSet30.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -342,6 +367,16 @@
             this.cmbClinic.Size = new System.Drawing.Size(328, 21);
             this.cmbClinic.TabIndex = 27;
             this.cmbClinic.ValueMember = "Clinic #";
+            // 
+            // clinicdetailsBindingSource
+            // 
+            this.clinicdetailsBindingSource.DataMember = "clinic_details";
+            this.clinicdetailsBindingSource.DataSource = this.d25535935DataSet1;
+            // 
+            // d25535935DataSet1
+            // 
+            this.d25535935DataSet1.DataSetName = "d25535935DataSet1";
+            this.d25535935DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dtpAppoint
             // 
@@ -567,16 +602,6 @@
             // 
             this.pet_owner_detailsTableAdapter.ClearBeforeFill = true;
             // 
-            // d25535935DataSet1
-            // 
-            this.d25535935DataSet1.DataSetName = "d25535935DataSet1";
-            this.d25535935DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clinicdetailsBindingSource
-            // 
-            this.clinicdetailsBindingSource.DataMember = "clinic_details";
-            this.clinicdetailsBindingSource.DataSource = this.d25535935DataSet1;
-            // 
             // clinic_detailsTableAdapter
             // 
             this.clinic_detailsTableAdapter.ClearBeforeFill = true;
@@ -619,16 +644,6 @@
             // 
             this.details_of_pet_ownersTableAdapter1.ClearBeforeFill = true;
             // 
-            // lblRegStatus
-            // 
-            this.lblRegStatus.AutoSize = true;
-            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.lblRegStatus.Location = new System.Drawing.Point(259, 319);
-            this.lblRegStatus.Name = "lblRegStatus";
-            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
-            this.lblRegStatus.TabIndex = 78;
-            // 
             // d25535935DataSet29
             // 
             this.d25535935DataSet29.DataSetName = "d25535935DataSet29";
@@ -643,19 +658,23 @@
             // 
             this.get_all_pet_ownersTableAdapter.ClearBeforeFill = true;
             // 
-            // d25535935DataSet30
-            // 
-            this.d25535935DataSet30.DataSetName = "d25535935DataSet30";
-            this.d25535935DataSet30.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // getallpetownersBindingSource1
-            // 
-            this.getallpetownersBindingSource1.DataMember = "get_all_pet_owners";
-            this.getallpetownersBindingSource1.DataSource = this.d25535935DataSet30;
-            // 
             // get_all_pet_ownersTableAdapter1
             // 
             this.get_all_pet_ownersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // d25535935DataSet32
+            // 
+            this.d25535935DataSet32.DataSetName = "d25535935DataSet32";
+            this.d25535935DataSet32.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // getownerpetsBindingSource
+            // 
+            this.getownerpetsBindingSource.DataMember = "get_owner_pets";
+            this.getownerpetsBindingSource.DataSource = this.d25535935DataSet32;
+            // 
+            // get_owner_petsTableAdapter
+            // 
+            this.get_owner_petsTableAdapter.ClearBeforeFill = true;
             // 
             // Appointments
             // 
@@ -691,6 +710,10 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
             this.panelRemoveUser.ResumeLayout(false);
             this.panelRemoveUser.PerformLayout();
@@ -704,8 +727,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petownerdetailsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicdetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsofpetownersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet8)).EndInit();
@@ -714,8 +735,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.detailsofpetownersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getownerpetsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -783,5 +804,8 @@
         private d25535935DataSet30 d25535935DataSet30;
         private System.Windows.Forms.BindingSource getallpetownersBindingSource1;
         private d25535935DataSet30TableAdapters.get_all_pet_ownersTableAdapter get_all_pet_ownersTableAdapter1;
+        private d25535935DataSet32 d25535935DataSet32;
+        private System.Windows.Forms.BindingSource getownerpetsBindingSource;
+        private d25535935DataSet32TableAdapters.get_owner_petsTableAdapter get_owner_petsTableAdapter;
     }
 }
