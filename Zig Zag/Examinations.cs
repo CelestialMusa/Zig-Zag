@@ -14,6 +14,9 @@ namespace Zig_Zag
         private MySqlDataReader reader;
         private DataTable myDataTable;
 
+        string exam_value;
+        string exam_display;
+
         public Examinations()
         {
             InitializeComponent();
@@ -142,7 +145,7 @@ namespace Zig_Zag
             }
         }
 
-        public void loadsPets(int staff_num)
+        private void loadsPets(int staff_num)
         {
             try
             {
@@ -162,8 +165,9 @@ namespace Zig_Zag
                     cmbPets.Items.Add(new { PetID = reader["PET_ID"].ToString(), PetDescript = reader["PET_DESCRIPTION"].ToString() });
                 }
 
-                cmbPets.ValueMember = "PetID";
-                cmbPets.DisplayMember = "PetDescript";
+
+                exam_value = cmbPets.ValueMember = "PetID";
+                exam_display = cmbPets.DisplayMember = "PetDescript";
             }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
