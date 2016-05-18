@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d25535935DataSet35" targetNamespace="http://tempuri.org/d25535935DataSet35.xsd" xmlns:mstns="http://tempuri.org/d25535935DataSet35.xsd" xmlns="http://tempuri.org/d25535935DataSet35.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="d25535935ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="d25535935ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Zig_Zag.Properties.Settings.GlobalReference.Default.d25535935ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="get_appointmentsTableAdapter" GeneratorDataComponentClassName="get_appointmentsTableAdapter" Name="get_appointments" UserDataComponentName="get_appointmentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="d25535935ConnectionString (Settings)" DbObjectName="`d25535935`.`get_appointments`" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>`d25535935`.`get_appointments`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OWNER_NUM" DataSetColumn="OWNER_NUM" />
+              <Mapping SourceColumn="App_Owner" DataSetColumn="App_Owner" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d25535935DataSet35" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="d25535935DataSet35" msprop:Generator_UserDSName="d25535935DataSet35">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="get_appointments" msprop:Generator_TableClassName="get_appointmentsDataTable" msprop:Generator_TableVarName="tableget_appointments" msprop:Generator_TablePropName="get_appointments" msprop:Generator_RowDeletingName="get_appointmentsRowDeleting" msprop:Generator_RowChangingName="get_appointmentsRowChanging" msprop:Generator_RowEvHandlerName="get_appointmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="get_appointmentsRowDeleted" msprop:Generator_UserTableName="get_appointments" msprop:Generator_RowChangedName="get_appointmentsRowChanged" msprop:Generator_RowEvArgName="get_appointmentsRowChangeEvent" msprop:Generator_RowClassName="get_appointmentsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OWNER_NUM" msprop:Generator_ColumnVarNameInTable="columnOWNER_NUM" msprop:Generator_ColumnPropNameInRow="OWNER_NUM" msprop:Generator_ColumnPropNameInTable="OWNER_NUMColumn" msprop:Generator_UserColumnName="OWNER_NUM" type="xs:unsignedByte" />
+              <xs:element name="App_Owner" msprop:Generator_ColumnVarNameInTable="columnApp_Owner" msprop:Generator_ColumnPropNameInRow="App_Owner" msprop:Generator_ColumnPropNameInTable="App_OwnerColumn" msprop:Generator_UserColumnName="App_Owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="114" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:get_appointments" />
+      <xs:field xpath="mstns:OWNER_NUM" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

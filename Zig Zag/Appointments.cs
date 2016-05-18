@@ -14,9 +14,6 @@ namespace Zig_Zag
         private MySqlDataReader reader;
         private DataTable myDataTable;
 
-        int count = 0;
-        string[] arr;
-
         string pet_num;
 
         private string stateAdd = "active";
@@ -238,7 +235,7 @@ namespace Zig_Zag
 
                 reader = command.ExecuteReader();
                 lblRegStatus.Visible = true;
-                lblRegStatus.Text = "Pet Successfuly Registered!";
+                lblRegStatus.Text = "Appointment Successfully Registered!";
             }
             catch (Exception ex)
             {
@@ -252,9 +249,10 @@ namespace Zig_Zag
 
         private void Appointments_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'd25535935DataSet35.get_appointments' table. You can move, or remove it, as needed.
+            this.get_appointmentsTableAdapter.Fill(this.d25535935DataSet35.get_appointments);
             // TODO: This line of code loads data into the 'd25535935DataSet30.get_all_pet_owners' table. You can move, or remove it, as needed.
             this.get_all_pet_ownersTableAdapter1.Fill(this.d25535935DataSet30.get_all_pet_owners);
-
             // TODO: This line of code loads data into the 'd25535935DataSet1.clinic_details' table. You can move, or remove it, as needed.
             this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet1.clinic_details);
 
@@ -281,7 +279,7 @@ namespace Zig_Zag
         {
             if(radioButtonEditAppointment.Checked)
             {
-                cmbEditAppointment.Enabled = false;
+                cmbEditAppointment.Enabled = true;
             }
         }
 
@@ -294,7 +292,7 @@ namespace Zig_Zag
             }
             catch(Exception)
             {
-
+                
             }
         }
 
@@ -332,6 +330,46 @@ namespace Zig_Zag
             {
                 connection.Close();
             }
-    }
+        }
+
+        private void cmbEditAppointment_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            loadAppointOwners();
+        }
+
+        private void loadAppointOwners()
+        {
+            try
+            {
+                byte owner_num = (byte)cmbEditAppointment.SelectedValue;
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "get_appointment_owner";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@owner_num", MySqlDbType.Bit)).Value = owner_num;
+
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cmbPetOwner.Text = (reader["OWNER_NAME"].ToString());
+                    dtpAppoint.Text = (reader["APP_DATE"].ToString());
+                    dtpTime.Text = (reader["APP_TIME"].ToString());
+                    cmbClinic.Text = (reader["Clinic_address"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                lblRegStatus.Text = ex.Message + ex.Source;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        
     }
 }

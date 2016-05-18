@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Collections;
 
 namespace Zig_Zag
 {
@@ -14,8 +15,13 @@ namespace Zig_Zag
         private MySqlDataReader reader;
         private DataTable myDataTable;
 
-        string exam_value;
-        string exam_display;
+        string pet_num;
+        string pen_num;
+
+        ArrayList arrPets = new ArrayList();
+        ArrayList arrPens = new ArrayList();
+
+        int index = 0;
 
         public Examinations()
         {
@@ -163,11 +169,12 @@ namespace Zig_Zag
                 while (reader.Read())
                 {
                     cmbPets.Items.Add(new { PetID = reader["PET_ID"].ToString(), PetDescript = reader["PET_DESCRIPTION"].ToString() });
+                    pet_num = reader["PET_ID"].ToString();
+                    arrPets.Add(pet_num);
                 }
 
-
-                exam_value = cmbPets.ValueMember = "PetID";
-                exam_display = cmbPets.DisplayMember = "PetDescript";
+                cmbPets.ValueMember = "PetID";
+                cmbPets.DisplayMember = "PetDescript";
             }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
@@ -199,8 +206,11 @@ namespace Zig_Zag
                 while (reader.Read())
                 {
                     cmbPens.Items.Add(new { PenID = reader["PEN_NUM"].ToString(), PenStatus = reader["STATUS"].ToString() });
+                    pen_num = reader["PEN_NUM"].ToString();
+                    arrPens.Insert(index, pen_num);
+                    index++;
                 }
-
+                index = 0;
                 cmbPens.ValueMember = "PenID";
                 cmbPens.DisplayMember = "PenID";
             }
@@ -217,24 +227,24 @@ namespace Zig_Zag
 
         private void pictureBoxGo_Click(object sender, EventArgs e)
         {
-            string descript = txtDescr.Text;
-            string pet_num = (string) cmbPets.SelectedValue;
+            string descript = txtDescr.Text; 
+
             int staff_num =  (int) cmbStaff.SelectedValue;
             string admin = cmbAdmin.SelectedText;
             
-
             if(admin=="Yes")
-            {
-                admin = "0";
-            }
-            else
             {
                 admin = "1";
             }
+            else
+            {
+                admin = "0";
+            }
 
-            string pen_num = (string) cmbPens.SelectedValue;
+            string pen = arrPens[cmbPens.SelectedIndex].ToString();
+            string pet = arrPets[cmbPets.SelectedIndex].ToString();
 
-            insertExam(descript, pet_num, staff_num, admin, pen_num);
+            insertExam(descript, pet, staff_num, admin, pen);
         }
 
         public void insertExam(string descript,string pet_num,int staff_num,string admin,string pen_num)
@@ -255,11 +265,11 @@ namespace Zig_Zag
 
                 reader = command.ExecuteReader();
                 lblRegStatus.Visible = true;
-                lblRegStatus.Text = "Pet Successfuly Registered!";
+                lblRegStatus.Text = "Pet Examination Successfully Completed!";
             }
             catch (Exception ex)
             {
-                lblRegStatus.Text = "Pet Registration Unsuccessful: " + ex.Source +", "+ ex.Message;
+                lblRegStatus.Text = "Pet Examination Could Not Be Complete: " + ex.Source +", "+ ex.Message;
             }
             finally
             {

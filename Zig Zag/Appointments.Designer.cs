@@ -33,9 +33,9 @@
             this.labelBack = new System.Windows.Forms.Label();
             this.labelSlogan = new System.Windows.Forms.Label();
             this.panel_AddUser = new System.Windows.Forms.Panel();
+            this.cmbEditAppointment = new System.Windows.Forms.ComboBox();
             this.labelViewAll = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbEditAppointment = new System.Windows.Forms.ComboBox();
             this.radioButtonEditAppointment = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -93,6 +93,13 @@
             this.d25535935DataSet32 = new Zig_Zag.d25535935DataSet32();
             this.getownerpetsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.get_owner_petsTableAdapter = new Zig_Zag.d25535935DataSet32TableAdapters.get_owner_petsTableAdapter();
+            this.d25535935DataSet33 = new Zig_Zag.d25535935DataSet33();
+            this.d25535935DataSet33BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getappointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getappointmentownerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.d25535935DataSet35 = new Zig_Zag.d25535935DataSet35();
+            this.getappointmentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.get_appointmentsTableAdapter = new Zig_Zag.d25535935DataSet35TableAdapters.get_appointmentsTableAdapter();
             this.panel_AddUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -125,6 +132,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getownerpetsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet33BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getappointmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getappointmentownerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getappointmentsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelBack
@@ -154,9 +167,9 @@
             // panel_AddUser
             // 
             this.panel_AddUser.BackColor = System.Drawing.Color.Transparent;
+            this.panel_AddUser.Controls.Add(this.cmbEditAppointment);
             this.panel_AddUser.Controls.Add(this.labelViewAll);
             this.panel_AddUser.Controls.Add(this.pictureBox1);
-            this.panel_AddUser.Controls.Add(this.cmbEditAppointment);
             this.panel_AddUser.Controls.Add(this.radioButtonEditAppointment);
             this.panel_AddUser.Controls.Add(this.tabControl1);
             this.panel_AddUser.Controls.Add(this.radioButtonAddAppointment);
@@ -165,6 +178,18 @@
             this.panel_AddUser.Name = "panel_AddUser";
             this.panel_AddUser.Size = new System.Drawing.Size(886, 523);
             this.panel_AddUser.TabIndex = 76;
+            // 
+            // cmbEditAppointment
+            // 
+            this.cmbEditAppointment.DataSource = this.getappointmentsBindingSource1;
+            this.cmbEditAppointment.DisplayMember = "App_Owner";
+            this.cmbEditAppointment.FormattingEnabled = true;
+            this.cmbEditAppointment.Location = new System.Drawing.Point(447, 21);
+            this.cmbEditAppointment.Name = "cmbEditAppointment";
+            this.cmbEditAppointment.Size = new System.Drawing.Size(172, 21);
+            this.cmbEditAppointment.TabIndex = 76;
+            this.cmbEditAppointment.ValueMember = "OWNER_NUM";
+            this.cmbEditAppointment.SelectedIndexChanged += new System.EventHandler(this.cmbEditAppointment_SelectedIndexChanged_1);
             // 
             // labelViewAll
             // 
@@ -185,14 +210,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(400, 1);
             this.pictureBox1.TabIndex = 74;
             this.pictureBox1.TabStop = false;
-            // 
-            // cmbEditAppointment
-            // 
-            this.cmbEditAppointment.FormattingEnabled = true;
-            this.cmbEditAppointment.Location = new System.Drawing.Point(443, 21);
-            this.cmbEditAppointment.Name = "cmbEditAppointment";
-            this.cmbEditAppointment.Size = new System.Drawing.Size(169, 21);
-            this.cmbEditAppointment.TabIndex = 3;
             // 
             // radioButtonEditAppointment
             // 
@@ -676,6 +693,36 @@
             // 
             this.get_owner_petsTableAdapter.ClearBeforeFill = true;
             // 
+            // d25535935DataSet33
+            // 
+            this.d25535935DataSet33.DataSetName = "d25535935DataSet33";
+            this.d25535935DataSet33.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // d25535935DataSet33BindingSource
+            // 
+            this.d25535935DataSet33BindingSource.DataSource = this.d25535935DataSet33;
+            this.d25535935DataSet33BindingSource.Position = 0;
+            // 
+            // getappointmentownerBindingSource
+            // 
+            this.getappointmentownerBindingSource.DataMember = "get_appointment_owner";
+            // 
+            // get_appointment_ownerTableAdapter
+            // 
+            // d25535935DataSet35
+            // 
+            this.d25535935DataSet35.DataSetName = "d25535935DataSet35";
+            this.d25535935DataSet35.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // getappointmentsBindingSource1
+            // 
+            this.getappointmentsBindingSource1.DataMember = "get_appointments";
+            this.getappointmentsBindingSource1.DataSource = this.d25535935DataSet35;
+            // 
+            // get_appointmentsTableAdapter
+            // 
+            this.get_appointmentsTableAdapter.ClearBeforeFill = true;
+            // 
             // Appointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -737,6 +784,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.getallpetownersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getownerpetsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet33BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getappointmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getappointmentownerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getappointmentsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,7 +806,6 @@
         private System.Windows.Forms.Panel panel_AddUser;
         private System.Windows.Forms.Label labelViewAll;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbEditAppointment;
         private System.Windows.Forms.RadioButton radioButtonEditAppointment;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -807,5 +859,13 @@
         private d25535935DataSet32 d25535935DataSet32;
         private System.Windows.Forms.BindingSource getownerpetsBindingSource;
         private d25535935DataSet32TableAdapters.get_owner_petsTableAdapter get_owner_petsTableAdapter;
+        private System.Windows.Forms.BindingSource d25535935DataSet33BindingSource;
+        private d25535935DataSet33 d25535935DataSet33;
+        private System.Windows.Forms.BindingSource getappointmentsBindingSource;
+        private System.Windows.Forms.ComboBox cmbEditAppointment;
+        private System.Windows.Forms.BindingSource getappointmentownerBindingSource;
+        private d25535935DataSet35 d25535935DataSet35;
+        private System.Windows.Forms.BindingSource getappointmentsBindingSource1;
+        private d25535935DataSet35TableAdapters.get_appointmentsTableAdapter get_appointmentsTableAdapter;
     }
 }

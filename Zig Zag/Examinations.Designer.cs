@@ -34,6 +34,7 @@
             this.labelViewAll = new System.Windows.Forms.Label();
             this.tabControlPage2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblRegStatus = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtDescr = new System.Windows.Forms.TextBox();
@@ -84,7 +85,6 @@
             this.petTableAdapter = new Zig_Zag.d25535935DataSet20TableAdapters.petTableAdapter();
             this.treatment_typeTableAdapter = new Zig_Zag.d25535935DataSet21TableAdapters.treatment_typeTableAdapter();
             this.get_medical_staffTableAdapter = new Zig_Zag.d25535935DataSet25TableAdapters.get_medical_staffTableAdapter();
-            this.lblRegStatus = new System.Windows.Forms.Label();
             this.panel_AddUser.SuspendLayout();
             this.tabControlPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -163,6 +163,16 @@
             this.tabPage1.Text = "Page 1 of 2";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lblRegStatus
+            // 
+            this.lblRegStatus.AutoSize = true;
+            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.lblRegStatus.Location = new System.Drawing.Point(226, 307);
+            this.lblRegStatus.Name = "lblRegStatus";
+            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblRegStatus.TabIndex = 78;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
@@ -214,7 +224,7 @@
             this.cmbStaff.DataSource = this.getmedicalstaffBindingSource;
             this.cmbStaff.DisplayMember = "Name";
             this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(352, 155);
+            this.cmbStaff.Location = new System.Drawing.Point(352, 119);
             this.cmbStaff.Name = "cmbStaff";
             this.cmbStaff.Size = new System.Drawing.Size(187, 21);
             this.cmbStaff.TabIndex = 58;
@@ -268,7 +278,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(226, 158);
+            this.label5.Location = new System.Drawing.Point(226, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 34;
@@ -286,7 +296,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(226, 122);
+            this.label3.Location = new System.Drawing.Point(226, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 32;
@@ -295,7 +305,7 @@
             // cmbPets
             // 
             this.cmbPets.FormattingEnabled = true;
-            this.cmbPets.Location = new System.Drawing.Point(352, 119);
+            this.cmbPets.Location = new System.Drawing.Point(352, 153);
             this.cmbPets.Name = "cmbPets";
             this.cmbPets.Size = new System.Drawing.Size(498, 21);
             this.cmbPets.TabIndex = 27;
@@ -605,16 +615,6 @@
             // get_medical_staffTableAdapter
             // 
             this.get_medical_staffTableAdapter.ClearBeforeFill = true;
-            // 
-            // lblRegStatus
-            // 
-            this.lblRegStatus.AutoSize = true;
-            this.lblRegStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblRegStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.lblRegStatus.Location = new System.Drawing.Point(226, 307);
-            this.lblRegStatus.Name = "lblRegStatus";
-            this.lblRegStatus.Size = new System.Drawing.Size(0, 13);
-            this.lblRegStatus.TabIndex = 78;
             // 
             // Examinations
             // 

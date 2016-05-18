@@ -151,7 +151,6 @@ namespace Zig_Zag
             {
                 comboBoxEditPetOwner.Enabled = true;
                 comboBoxEditPetOwner.Text = comboBoxEditPetOwner.SelectedText;
-                //loadDetails();
             }
         }
 
