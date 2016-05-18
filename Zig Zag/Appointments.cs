@@ -254,8 +254,19 @@ namespace Zig_Zag
         private void Appointments_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'd25535935DataSet35.get_appointments' table. You can move, or remove it, as needed.
-            this.get_appointmentsTableAdapter.Fill(this.d25535935DataSet35.get_appointments);
-            // TODO: This line of code loads data into the 'd25535935DataSet30.get_all_pet_owners' table. You can move, or remove it, as needed.
+            try
+            {
+                this.get_appointmentsTableAdapter.Fill(this.d25535935DataSet35.get_appointments);
+            }
+            catch(Exception)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+                // TODO: This line of code loads data into the 'd25535935DataSet30.get_all_pet_owners' table. You can move, or remove it, as needed.
             this.get_all_pet_ownersTableAdapter1.Fill(this.d25535935DataSet30.get_all_pet_owners);
             // TODO: This line of code loads data into the 'd25535935DataSet1.clinic_details' table. You can move, or remove it, as needed.
             this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet1.clinic_details);
@@ -290,17 +301,17 @@ namespace Zig_Zag
         private void cmbPetOwner_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
-            {
-                string owner_num = arrPets[cmbPet.SelectedIndex].ToString();
+            {  
+                byte owner_num = (byte) cmbPetOwner.SelectedValue;
                 loadPet(owner_num);
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                
+                MessageBox.Show(ex.Message + " " + ex.Source);           
             }
         }
 
-        private void loadPet(string owner_num)
+        private void loadPet(byte owner_num)
         {    
             try
             {
@@ -319,7 +330,8 @@ namespace Zig_Zag
                 {
                     cmbPet.Items.Add(new { PetID = reader["PET_ID"].ToString(), PetName = reader["PET_DESCRIPTION"].ToString() });
                     pet_num = reader["PET_ID"].ToString();
-                    arrPets.Insert(index++, pet_num);
+                    arrPets.Insert(index, pet_num);
+                    index++;
                 }
                 index = 0;
 
@@ -330,7 +342,7 @@ namespace Zig_Zag
             catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-                MessageBox.Show(ex.Message+" "+ex.Source);
+               // MessageBox.Show(ex.Message+" "+ex.Source);
             }
             finally
             {
@@ -341,6 +353,7 @@ namespace Zig_Zag
         private void cmbEditAppointment_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             loadAppointOwners();
+            connection.Close();
         }
 
         private void loadAppointOwners()
@@ -348,6 +361,7 @@ namespace Zig_Zag
             try
             {
                 byte owner_num = (byte)cmbEditAppointment.SelectedValue;
+
                 connection.Open();
                 command = new MySqlCommand();
                 command.Connection = connection;
@@ -374,8 +388,6 @@ namespace Zig_Zag
             {
                 connection.Close();
             }
-        }
-
-        
+        }   
     }
 }
