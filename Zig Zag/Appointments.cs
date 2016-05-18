@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Collections;
 
 namespace Zig_Zag
 {
@@ -15,6 +16,9 @@ namespace Zig_Zag
         private DataTable myDataTable;
 
         string pet_num;
+        int index = 0;
+
+        ArrayList arrPets = new ArrayList();
 
         private string stateAdd = "active";
         private string stateRemove = "";
@@ -287,7 +291,7 @@ namespace Zig_Zag
         {
             try
             {
-                byte owner_num = (byte) (cmbPetOwner.SelectedValue);
+                string owner_num = arrPets[cmbPet.SelectedIndex].ToString();
                 loadPet(owner_num);
             }
             catch(Exception)
@@ -296,7 +300,7 @@ namespace Zig_Zag
             }
         }
 
-        private void loadPet(byte owner_num)
+        private void loadPet(string owner_num)
         {    
             try
             {
@@ -315,7 +319,9 @@ namespace Zig_Zag
                 {
                     cmbPet.Items.Add(new { PetID = reader["PET_ID"].ToString(), PetName = reader["PET_DESCRIPTION"].ToString() });
                     pet_num = reader["PET_ID"].ToString();
+                    arrPets.Insert(index++, pet_num);
                 }
+                index = 0;
 
                 cmbPet.ValueMember = "PetID";
                 cmbPet.DisplayMember = "PetName";
@@ -362,7 +368,7 @@ namespace Zig_Zag
             }
             catch (Exception ex)
             {
-                lblRegStatus.Text = ex.Message + ex.Source;
+                //lblRegStatus.Text = ex.Message + ex.Source;
             }
             finally
             {
