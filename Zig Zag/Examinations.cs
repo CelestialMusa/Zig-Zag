@@ -127,6 +127,8 @@ namespace Zig_Zag
 
         private void Examinations_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'd25535935DataSet36.get_examination' table. You can move, or remove it, as needed.
+            this.get_examinationTableAdapter.Fill(this.d25535935DataSet36.get_examination);
             // TODO: This line of code loads data into the 'd25535935DataSet25.get_medical_staff' table. You can move, or remove it, as needed.
             this.get_medical_staffTableAdapter.Fill(this.d25535935DataSet25.get_medical_staff);
             // TODO: This line of code loads data into the 'd25535935DataSet21.treatment_type' table. You can move, or remove it, as needed.
@@ -135,6 +137,7 @@ namespace Zig_Zag
             this.petTableAdapter.Fill(this.d25535935DataSet20.pet);
             // TODO: This line of code loads data into the 'd25535935DataSet17.list_staff_members' table. You can move, or remove it, as needed.
             this.list_staff_membersTableAdapter.Fill(this.d25535935DataSet17.list_staff_members);
+            lblDisplay.Visible = true;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -270,6 +273,49 @@ namespace Zig_Zag
             catch (Exception ex)
             {
                 lblRegStatus.Text = "Pet Examination Could Not Be Complete: " + ex.Source +", "+ ex.Message;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            byte exam_num = (byte)cmbExamination.SelectedValue;
+            byte treatment = (byte)cmbTreatments.SelectedValue;
+            string begin_date = (string)dtpBegin.Value.ToShortDateString();
+            string end_date = (string)dtpEnd.Value.ToShortDateString();
+            int qty = Convert.ToInt32(cmbQty.SelectedItem);
+            string comments = txtComment.Text;
+
+            insertTreatment(treatment, begin_date, end_date, qty, comments,exam_num);
+        }
+
+        private void insertTreatment(byte treatment,string begin_date,string end_date,int qty,string comments,byte exam_num)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "insert_suggested_treatments_for_exam";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@date_begin", MySqlDbType.Timestamp)).Value = begin_date;
+                command.Parameters.Add(new MySqlParameter("@date_end", MySqlDbType.Date)).Value = end_date;
+                command.Parameters.Add(new MySqlParameter("@exam_id", MySqlDbType.Bit)).Value = exam_num;
+                command.Parameters.Add(new MySqlParameter("@treatment_id", MySqlDbType.Bit)).Value = treatment;
+                command.Parameters.Add(new MySqlParameter("@treat_qty", MySqlDbType.Int32)).Value = qty;
+                command.Parameters.Add(new MySqlParameter("@treat_comments", MySqlDbType.VarBinary)).Value = comments;
+
+                reader = command.ExecuteReader();
+                lblDisplay.Visible = true;
+                lblDisplay.Text = "Pet Treatment Successfully Proposed!";
+            }
+            catch (Exception ex)
+            {
+                lblDisplay.Text = "Pet Treatment Could Not Be Complete: " + ex.Source + ", " + ex.Message;
             }
             finally
             {

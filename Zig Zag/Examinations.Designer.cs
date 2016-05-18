@@ -52,22 +52,23 @@
             this.cmbPets = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cmbQty = new System.Windows.Forms.ComboBox();
+            this.cmbExamination = new System.Windows.Forms.ComboBox();
+            this.getexaminationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.d25535935DataSet36 = new Zig_Zag.d25535935DataSet36();
+            this.lblExam = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.buttonAddTreatment = new System.Windows.Forms.Button();
+            this.txtComment = new System.Windows.Forms.TextBox();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpBegin = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cmbTreatments = new System.Windows.Forms.ComboBox();
             this.treatmenttypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.d25535935DataSet21 = new Zig_Zag.d25535935DataSet21();
             this.label11 = new System.Windows.Forms.Label();
@@ -85,6 +86,8 @@
             this.petTableAdapter = new Zig_Zag.d25535935DataSet20TableAdapters.petTableAdapter();
             this.treatment_typeTableAdapter = new Zig_Zag.d25535935DataSet21TableAdapters.treatment_typeTableAdapter();
             this.get_medical_staffTableAdapter = new Zig_Zag.d25535935DataSet25TableAdapters.get_medical_staffTableAdapter();
+            this.get_examinationTableAdapter = new Zig_Zag.d25535935DataSet36TableAdapters.get_examinationTableAdapter();
+            this.lblDisplay = new System.Windows.Forms.Label();
             this.panel_AddUser.SuspendLayout();
             this.tabControlPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -93,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.getexaminationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmenttypeBindingSource)).BeginInit();
@@ -321,22 +326,22 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lblDisplay);
+            this.tabPage2.Controls.Add(this.cmbQty);
+            this.tabPage2.Controls.Add(this.cmbExamination);
+            this.tabPage2.Controls.Add(this.lblExam);
             this.tabPage2.Controls.Add(this.pictureBox3);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.listBox1);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Controls.Add(this.buttonAddTreatment);
+            this.tabPage2.Controls.Add(this.txtComment);
+            this.tabPage2.Controls.Add(this.dtpEnd);
+            this.tabPage2.Controls.Add(this.dtpBegin);
             this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.textBox2);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.comboBox7);
+            this.tabPage2.Controls.Add(this.cmbTreatments);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -345,6 +350,50 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Page 2 of 2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cmbQty
+            // 
+            this.cmbQty.FormattingEnabled = true;
+            this.cmbQty.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbQty.Location = new System.Drawing.Point(338, 219);
+            this.cmbQty.Name = "cmbQty";
+            this.cmbQty.Size = new System.Drawing.Size(61, 21);
+            this.cmbQty.TabIndex = 85;
+            // 
+            // cmbExamination
+            // 
+            this.cmbExamination.DataSource = this.getexaminationBindingSource;
+            this.cmbExamination.DisplayMember = "EXAM_DETAILS";
+            this.cmbExamination.FormattingEnabled = true;
+            this.cmbExamination.Location = new System.Drawing.Point(338, 73);
+            this.cmbExamination.Name = "cmbExamination";
+            this.cmbExamination.Size = new System.Drawing.Size(481, 21);
+            this.cmbExamination.TabIndex = 84;
+            this.cmbExamination.ValueMember = "EXAM_ID";
+            // 
+            // getexaminationBindingSource
+            // 
+            this.getexaminationBindingSource.DataMember = "get_examination";
+            this.getexaminationBindingSource.DataSource = this.d25535935DataSet36;
+            // 
+            // d25535935DataSet36
+            // 
+            this.d25535935DataSet36.DataSetName = "d25535935DataSet36";
+            this.d25535935DataSet36.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lblExam
+            // 
+            this.lblExam.AutoSize = true;
+            this.lblExam.Location = new System.Drawing.Point(212, 76);
+            this.lblExam.Name = "lblExam";
+            this.lblExam.Size = new System.Drawing.Size(64, 13);
+            this.lblExam.TabIndex = 83;
+            this.lblExam.Text = "Examination";
             // 
             // pictureBox3
             // 
@@ -366,68 +415,35 @@
             this.label6.TabIndex = 81;
             this.label6.Text = "Proposed Treatments";
             // 
-            // button1
+            // txtComment
             // 
-            this.button1.Location = new System.Drawing.Point(447, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 23);
-            this.button1.TabIndex = 80;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtComment.Location = new System.Drawing.Point(338, 254);
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(258, 20);
+            this.txtComment.TabIndex = 78;
             // 
-            // listBox1
+            // dtpEnd
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(338, 240);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(258, 134);
-            this.listBox1.TabIndex = 79;
+            this.dtpEnd.Location = new System.Drawing.Point(338, 178);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(200, 20);
+            this.dtpEnd.TabIndex = 77;
             // 
-            // textBox3
+            // dtpBegin
             // 
-            this.textBox3.Location = new System.Drawing.Point(338, 185);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(258, 20);
-            this.textBox3.TabIndex = 78;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(338, 109);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 77;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(338, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 76;
-            // 
-            // buttonAddTreatment
-            // 
-            this.buttonAddTreatment.Location = new System.Drawing.Point(447, 211);
-            this.buttonAddTreatment.Name = "buttonAddTreatment";
-            this.buttonAddTreatment.Size = new System.Drawing.Size(47, 23);
-            this.buttonAddTreatment.TabIndex = 75;
-            this.buttonAddTreatment.Text = "Add";
-            this.buttonAddTreatment.UseVisualStyleBackColor = true;
+            this.dtpBegin.Location = new System.Drawing.Point(338, 142);
+            this.dtpBegin.Name = "dtpBegin";
+            this.dtpBegin.Size = new System.Drawing.Size(200, 20);
+            this.dtpBegin.TabIndex = 76;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(212, 115);
+            this.label12.Location = new System.Drawing.Point(212, 184);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
             this.label12.TabIndex = 74;
             this.label12.Text = "End date";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(338, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(52, 20);
-            this.textBox2.TabIndex = 73;
             // 
             // label2
             // 
@@ -450,13 +466,14 @@
             this.pictureBox1.Size = new System.Drawing.Size(96, 65);
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(212, 150);
+            this.label7.Location = new System.Drawing.Point(212, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 66;
@@ -465,7 +482,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(212, 188);
+            this.label8.Location = new System.Drawing.Point(212, 257);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 65;
@@ -474,22 +491,22 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(212, 79);
+            this.label9.Location = new System.Drawing.Point(212, 148);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 13);
             this.label9.TabIndex = 64;
             this.label9.Text = "Begin date";
             // 
-            // comboBox7
+            // cmbTreatments
             // 
-            this.comboBox7.DataSource = this.treatmenttypeBindingSource;
-            this.comboBox7.DisplayMember = "TREAT_DESCRIPTION";
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(338, 42);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(258, 21);
-            this.comboBox7.TabIndex = 63;
-            this.comboBox7.ValueMember = "TREATMENT_ID";
+            this.cmbTreatments.DataSource = this.treatmenttypeBindingSource;
+            this.cmbTreatments.DisplayMember = "TREAT_DESCRIPTION";
+            this.cmbTreatments.FormattingEnabled = true;
+            this.cmbTreatments.Location = new System.Drawing.Point(338, 111);
+            this.cmbTreatments.Name = "cmbTreatments";
+            this.cmbTreatments.Size = new System.Drawing.Size(258, 21);
+            this.cmbTreatments.TabIndex = 63;
+            this.cmbTreatments.ValueMember = "TREATMENT_ID";
             // 
             // treatmenttypeBindingSource
             // 
@@ -504,7 +521,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(212, 45);
+            this.label11.Location = new System.Drawing.Point(212, 114);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 62;
@@ -616,6 +633,20 @@
             // 
             this.get_medical_staffTableAdapter.ClearBeforeFill = true;
             // 
+            // get_examinationTableAdapter
+            // 
+            this.get_examinationTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.lblDisplay.Location = new System.Drawing.Point(212, 313);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(0, 13);
+            this.lblDisplay.TabIndex = 86;
+            // 
             // Examinations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,6 +678,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGo)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.getexaminationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d25535935DataSet36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmenttypeBindingSource)).EndInit();
@@ -689,20 +722,16 @@
         private System.Windows.Forms.Label labelSubmit;
         private System.Windows.Forms.PictureBox pictureBoxGo;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button buttonAddTreatment;
+        private System.Windows.Forms.TextBox txtComment;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
+        private System.Windows.Forms.DateTimePicker dtpBegin;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cmbTreatments;
         private System.Windows.Forms.Label label11;
         private d25535935DataSet17 d25535935DataSet17;
         private System.Windows.Forms.BindingSource liststaffmembersBindingSource;
@@ -721,5 +750,12 @@
         private System.Windows.Forms.BindingSource getmedicalstaffBindingSource;
         private d25535935DataSet25TableAdapters.get_medical_staffTableAdapter get_medical_staffTableAdapter;
         private System.Windows.Forms.Label lblRegStatus;
+        private System.Windows.Forms.ComboBox cmbExamination;
+        private System.Windows.Forms.Label lblExam;
+        private d25535935DataSet36 d25535935DataSet36;
+        private System.Windows.Forms.BindingSource getexaminationBindingSource;
+        private d25535935DataSet36TableAdapters.get_examinationTableAdapter get_examinationTableAdapter;
+        private System.Windows.Forms.ComboBox cmbQty;
+        private System.Windows.Forms.Label lblDisplay;
     }
 }

@@ -253,6 +253,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>d25535935DataSet35.xsd</DependentUpon>
     </Compile>
+    <Compile Include="d25535935DataSet361.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>d25535935DataSet361.xsd</DependentUpon>
+    </Compile>
     <Compile Include="d25535935DataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -824,6 +829,17 @@
     </None>
     <None Include="d25535935DataSet35.xss">
       <DependentUpon>d25535935DataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet361.xsc">
+      <DependentUpon>d25535935DataSet361.xsd</DependentUpon>
+    </None>
+    <None Include="d25535935DataSet361.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>d25535935DataSet361.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="d25535935DataSet361.xss">
+      <DependentUpon>d25535935DataSet361.xsd</DependentUpon>
     </None>
     <None Include="d25535935DataSet4.xsc">
       <DependentUpon>d25535935DataSet4.xsd</DependentUpon>
