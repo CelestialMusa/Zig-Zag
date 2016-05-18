@@ -213,7 +213,7 @@ namespace Zig_Zag
 
         private void pictureBoxGo_Click(object sender, EventArgs e)
         {
-            byte owner_num = (byte)cmbPetOwner.SelectedValue;
+            byte owner_num = (byte) cmbPetOwner.SelectedValue;
             string date = dtpAppoint.Value.ToShortDateString();
             string time = dtpTime.Value.Hour.ToString()+":"+ dtpTime.Value.Minute.ToString()+":"+dtpTime.Value.Second.ToString();
             string dateTime = date+" "+time;

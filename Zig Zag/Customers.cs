@@ -162,7 +162,7 @@ namespace Zig_Zag
                 connection.Open();
                 command = new MySqlCommand();
                 command.Connection = connection;
-                command.CommandText = "get_owner";
+                command.CommandText = "get_specific_owner";
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new MySqlParameter("@owner_num", MySqlDbType.Int32)).Value = owner_num;
@@ -336,14 +336,26 @@ namespace Zig_Zag
 
         private void Customers_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'd25535935DataSet19.clinic_details' table. You can move, or remove it, as needed.
-            this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet19.clinic_details);
-            // TODO: This line of code loads data into the 'd25535935DataSet18.pet_owner_details' table. You can move, or remove it, as needed.
-            this.pet_owner_detailsTableAdapter.Fill(this.d25535935DataSet18.pet_owner_details);
-            comboBoxEditPetOwner.Enabled = false;
-            comboBoxEditPetOwner.Text = "";
-            cmbClinic.Text = "";
-            txtFirst.Focus();
+            try
+            {
+                comboBoxEditPetOwner.Enabled = false;
+                comboBoxEditPetOwner.Text = "";
+                cmbClinic.Text = "";
+                txtFirst.Focus();
+                // TODO: This line of code loads data into the 'd25535935DataSet19.clinic_details' table. You can move, or remove it, as needed.
+                this.clinic_detailsTableAdapter.Fill(this.d25535935DataSet19.clinic_details);
+                // TODO: This line of code loads data into the 'd25535935DataSet18.pet_owner_details' table. You can move, or remove it, as needed.
+                this.pet_owner_detailsTableAdapter.Fill(this.d25535935DataSet18.pet_owner_details);
+                
+            }
+            catch(Exception)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
     }
 }
