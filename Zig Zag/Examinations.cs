@@ -128,16 +128,23 @@ namespace Zig_Zag
         private void Examinations_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'd25535935DataSet36.get_examination' table. You can move, or remove it, as needed.
-            this.get_examinationTableAdapter.Fill(this.d25535935DataSet36.get_examination);
+            
             // TODO: This line of code loads data into the 'd25535935DataSet25.get_medical_staff' table. You can move, or remove it, as needed.
             this.get_medical_staffTableAdapter.Fill(this.d25535935DataSet25.get_medical_staff);
             // TODO: This line of code loads data into the 'd25535935DataSet21.treatment_type' table. You can move, or remove it, as needed.
-            this.treatment_typeTableAdapter.Fill(this.d25535935DataSet21.treatment_type);
+            
             // TODO: This line of code loads data into the 'd25535935DataSet20.pet' table. You can move, or remove it, as needed.
             this.petTableAdapter.Fill(this.d25535935DataSet20.pet);
             // TODO: This line of code loads data into the 'd25535935DataSet17.list_staff_members' table. You can move, or remove it, as needed.
             this.list_staff_membersTableAdapter.Fill(this.d25535935DataSet17.list_staff_members);
             lblDisplay.Visible = true;
+            cmbAdmin.Text = "";
+            cmbExamination.Text = "";
+            cmbPens.Text = "";
+            cmbPets.Text = "";
+            cmbQty.Text = "";
+            cmbStaff.Text = "";
+            cmbTreatments.Text = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -248,6 +255,15 @@ namespace Zig_Zag
             string pet = arrPets[cmbPets.SelectedIndex].ToString();
 
             insertExam(descript, pet, staff_num, admin, pen);
+            tabControlPage2.Show();
+
+            cmbAdmin.Text = "";
+            cmbExamination.Text = "";
+            cmbPens.Text = "";
+            cmbPets.Text = "";
+            cmbQty.Text = "";
+            cmbStaff.Text = "";
+            cmbTreatments.Text = "";
         }
 
         public void insertExam(string descript,string pet_num,int staff_num,string admin,string pen_num)
@@ -290,6 +306,16 @@ namespace Zig_Zag
             string comments = txtComment.Text;
 
             insertTreatment(treatment, begin_date, end_date, qty, comments,exam_num);
+            this.get_examinationTableAdapter.Fill(this.d25535935DataSet36.get_examination);
+            this.treatment_typeTableAdapter.Fill(this.d25535935DataSet21.treatment_type);
+
+            cmbAdmin.Text = "";
+            cmbExamination.Text = "";
+            cmbPens.Text = "";
+            cmbPets.Text = "";
+            cmbQty.Text = "";
+            cmbStaff.Text = "";
+            cmbTreatments.Text = "";
         }
 
         private void insertTreatment(byte treatment,string begin_date,string end_date,int qty,string comments,byte exam_num)
@@ -315,7 +341,7 @@ namespace Zig_Zag
             }
             catch (Exception ex)
             {
-                lblDisplay.Text = "Pet Treatment Could Not Be Complete: " + ex.Source + ", " + ex.Message;
+                lblDisplay.Text = "Pet Treatment Could Not Be Completed: " + ex.Source + ", " + ex.Message;
             }
             finally
             {
