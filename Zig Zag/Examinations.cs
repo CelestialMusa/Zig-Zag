@@ -128,11 +128,11 @@ namespace Zig_Zag
         private void Examinations_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'd25535935DataSet36.get_examination' table. You can move, or remove it, as needed.
-            
+            this.get_examinationTableAdapter.Fill(this.d25535935DataSet36.get_examination);
             // TODO: This line of code loads data into the 'd25535935DataSet25.get_medical_staff' table. You can move, or remove it, as needed.
             this.get_medical_staffTableAdapter.Fill(this.d25535935DataSet25.get_medical_staff);
             // TODO: This line of code loads data into the 'd25535935DataSet21.treatment_type' table. You can move, or remove it, as needed.
-            
+            this.treatment_typeTableAdapter.Fill(this.d25535935DataSet21.treatment_type);
             // TODO: This line of code loads data into the 'd25535935DataSet20.pet' table. You can move, or remove it, as needed.
             this.petTableAdapter.Fill(this.d25535935DataSet20.pet);
             // TODO: This line of code loads data into the 'd25535935DataSet17.list_staff_members' table. You can move, or remove it, as needed.
@@ -264,6 +264,12 @@ namespace Zig_Zag
             cmbQty.Text = "";
             cmbStaff.Text = "";
             cmbTreatments.Text = "";
+            txtComment.Text = "";
+            txtDescr.Text = "";
+            // TODO: This line of code loads data into the 'd25535935DataSet36.get_examination' table. You can move, or remove it, as needed.
+            this.get_examinationTableAdapter.Fill(this.d25535935DataSet36.get_examination);
+            // TODO: This line of code loads data into the 'd25535935DataSet21.treatment_type' table. You can move, or remove it, as needed.
+            this.treatment_typeTableAdapter.Fill(this.d25535935DataSet21.treatment_type);
         }
 
         public void insertExam(string descript,string pet_num,int staff_num,string admin,string pen_num)

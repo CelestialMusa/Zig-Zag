@@ -52,6 +52,7 @@
             this.cmbPets = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblDisplay = new System.Windows.Forms.Label();
             this.cmbQty = new System.Windows.Forms.ComboBox();
             this.cmbExamination = new System.Windows.Forms.ComboBox();
             this.getexaminationBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -87,7 +88,6 @@
             this.treatment_typeTableAdapter = new Zig_Zag.d25535935DataSet21TableAdapters.treatment_typeTableAdapter();
             this.get_medical_staffTableAdapter = new Zig_Zag.d25535935DataSet25TableAdapters.get_medical_staffTableAdapter();
             this.get_examinationTableAdapter = new Zig_Zag.d25535935DataSet36TableAdapters.get_examinationTableAdapter();
-            this.lblDisplay = new System.Windows.Forms.Label();
             this.panel_AddUser.SuspendLayout();
             this.tabControlPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -350,6 +350,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Page 2 of 2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
+            this.lblDisplay.Location = new System.Drawing.Point(212, 313);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(0, 13);
+            this.lblDisplay.TabIndex = 86;
             // 
             // cmbQty
             // 
@@ -636,16 +646,6 @@
             // get_examinationTableAdapter
             // 
             this.get_examinationTableAdapter.ClearBeforeFill = true;
-            // 
-            // lblDisplay
-            // 
-            this.lblDisplay.AutoSize = true;
-            this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(135)))), ((int)(((byte)(25)))));
-            this.lblDisplay.Location = new System.Drawing.Point(212, 313);
-            this.lblDisplay.Name = "lblDisplay";
-            this.lblDisplay.Size = new System.Drawing.Size(0, 13);
-            this.lblDisplay.TabIndex = 86;
             // 
             // Examinations
             // 
